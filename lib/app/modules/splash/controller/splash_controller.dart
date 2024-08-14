@@ -6,7 +6,7 @@ class SplashController extends GetxController {
   void onInit() {
     super.onInit();
     Timer(const Duration(seconds: 3), () {
-      Get.offNamed('/home_screen'); // Navigate to HomeScreen after 3 seconds
+      Get.offNamed('/onboading_screen'); // Navigate to HomeScreen after 3 seconds
     });
   }
 }
