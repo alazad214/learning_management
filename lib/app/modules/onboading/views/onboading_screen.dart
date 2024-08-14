@@ -26,10 +26,10 @@ class OnboadingScreen extends StatelessWidget {
         ),
       ],
       onDone: () {
-        Get.offNamed("/HomeScreen");
+        Get.offNamed("/login_screen");
       },
       onSkip: () {
-        Get.offNamed("/HomeScreen");
+        Get.offNamed("/login_screen");
       },
       showSkipButton: true,
       skip: const Text("Skip"),

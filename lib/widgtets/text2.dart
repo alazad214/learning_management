@@ -1,34 +1,34 @@
 import 'package:flutter/material.dart';
 
-class Text1 extends StatelessWidget {
+class Text2 extends StatelessWidget {
   final String? text;
   final color;
   final size;
   final fontweight;
   final padding;
-  final ontap;
-  const Text1(
+  final alignment;
+  const Text2(
       {super.key,
       this.text,
       this.color,
       this.size,
       this.fontweight,
       this.padding,
-      this.ontap});
+      this.alignment});
 
   @override
   Widget build(BuildContext context) {
-    return InkWell(
-      onTap: ontap,
-      child: Padding(
-        padding: padding ?? const EdgeInsets.all(0.0),
+    return Padding(
+      padding: padding ?? const EdgeInsets.all(0.0),
+      child: Align(
+        alignment: alignment??Alignment.center,
         child: Text(
           text!,
           overflow: TextOverflow.ellipsis,
           style: TextStyle(
               color: color ?? Colors.black,
-              fontSize: size ?? 18.0,
-              fontWeight: fontweight ?? FontWeight.w500),
+              fontSize: size ?? 14.0,
+              fontWeight: fontweight ?? FontWeight.w400),
         ),
       ),
     );
