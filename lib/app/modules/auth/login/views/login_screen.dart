@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:learning_management/app/modules/auth/forget/forget_screen.dart';
+import 'package:learning_management/app/modules/auth/register/views/register_screen.dart';
 import 'package:learning_management/utils/app_colors.dart';
 import 'package:learning_management/widgtets/button1.dart';
 import 'package:learning_management/widgtets/custom_appbar.dart';
@@ -41,11 +45,14 @@ class LoginScreen extends StatelessWidget {
               suffixicon: Icons.remove_red_eye,
             ),
             const SizedBox(height: 15.0),
-            const Text2(
+            Text2(
               text: "Forget password?",
               color: Colors.blueAccent,
-              padding: EdgeInsets.only(right: 20),
+              padding: const EdgeInsets.only(right: 20),
               alignment: Alignment.centerRight,
+              ontap: () {
+                Get.to(() => const ForgetScreen());
+              },
             ),
             const SizedBox(height: 30.0),
             Button1(
@@ -77,16 +84,21 @@ class LoginScreen extends StatelessWidget {
               ],
             ),
             const SizedBox(height: 60.0),
-            const Wrap(
+            Wrap(
               crossAxisAlignment: WrapCrossAlignment.center,
               children: [
-                Text2(
+                const Text2(
                   text: "Don't have an accoutn?  ",
                 ),
-                Text2(
-                  text: "Register",
-                  fontweight: FontWeight.bold,
-                  color: Colors.red,
+                InkWell(
+                  onTap: () {
+                    Get.to(() => const RegisterScreen());
+                  },
+                  child: const Text2(
+                    text: "Register",
+                    fontweight: FontWeight.bold,
+                    color: Colors.red,
+                  ),
                 ),
               ],
             )
