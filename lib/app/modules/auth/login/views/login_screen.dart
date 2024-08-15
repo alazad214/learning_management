@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:learning_management/app/modules/auth/forget/forget_screen.dart';
 import 'package:learning_management/app/modules/auth/register/views/register_screen.dart';
+import 'package:learning_management/app/modules/bottom%20nav/views/bottom_nav_screen.dart';
 import 'package:learning_management/utils/app_colors.dart';
 import 'package:learning_management/widgtets/button1.dart';
 import 'package:learning_management/widgtets/custom_appbar.dart';
@@ -57,7 +58,9 @@ class LoginScreen extends StatelessWidget {
             const SizedBox(height: 30.0),
             Button1(
               text: 'LOG IN',
-              ontap: () {},
+              ontap: () {
+                Get.to(()=> BottomNavScreen());
+              },
             ),
             const SizedBox(height: 30.0),
             const Row(
