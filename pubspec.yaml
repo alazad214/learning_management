@@ -67,6 +67,7 @@ flutter:
     - assets/images/
     - assets/images/slider/
     - assets/images/course/
+    - assets/images/teacher/
     - assets/images/icon/
     - assets/fonts/
   #   - images/a_dot_ham.jpeg
