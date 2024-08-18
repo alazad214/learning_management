@@ -12,8 +12,7 @@ class CourseScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: appbar ??
-            const CustomAppBar(),
+        appBar: appbar ?? const CustomAppBar(),
         body: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 15.0),
           child: SingleChildScrollView(

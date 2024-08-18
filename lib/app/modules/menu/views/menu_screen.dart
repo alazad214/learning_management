@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:learning_management/app/modules/menu/widget/settings_card.dart';
 import 'package:learning_management/app/modules/menu/widget/settings_utils.dart';
 import 'package:learning_management/app/modules/menu/widget/theme_lagnuage.dart';
-import 'package:learning_management/widgtets/text1.dart';
+import 'package:learning_management/widgtets/custom_appbar.dart';
 import 'package:learning_management/widgtets/text2.dart';
 
 class MenuScreen extends StatelessWidget {
@@ -12,6 +12,7 @@ class MenuScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar:  const CustomAppBar(),
         body: SingleChildScrollView(
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 25.0, vertical: 20),
