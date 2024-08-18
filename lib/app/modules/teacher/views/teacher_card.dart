@@ -31,7 +31,7 @@ class TeacherCard extends StatelessWidget {
                     height: 50,
                     width: double.infinity,
                     color: Colors.black54,
-                    child:  Column(
+                    child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text(

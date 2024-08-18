@@ -7,6 +7,7 @@ import 'package:learning_management/app/modules/course/views/course_utils.dart';
 import 'package:learning_management/app/modules/free%20course/widgets/free_course_screen.dart';
 import 'package:learning_management/app/modules/home/widgets/slider.dart';
 import 'package:learning_management/app/modules/teacher/views/teacher_card.dart';
+import 'package:learning_management/app/modules/teacher/views/teacher_screen.dart';
 import 'package:learning_management/widgtets/backappbar.dart';
 import 'package:learning_management/widgtets/custom_see_all.dart';
 import 'package:learning_management/widgtets/text1.dart';
@@ -46,10 +47,16 @@ class HomeScreen extends StatelessWidget {
                     course: courseUtils[i]['course'],
                     image: courseUtils[i]['image'],
                   ),
-                Divider(),
+                const Divider(),
                 const SizedBox(height: 10),
-                const CustomSeeAll(title: 'Our Teachers'),
-                TeacherCard()
+                CustomSeeAll(
+                    title: 'Our Teachers',
+                    ontap: () => Get.to(() => const TeacherScreen())),
+                const SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      children: [TeacherCard()],
+                    ))
               ],
             ),
           ),
