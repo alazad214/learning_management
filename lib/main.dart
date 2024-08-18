@@ -16,6 +16,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       title: AppString.name,
       debugShowCheckedModeBanner: false,
+      theme: ThemeData(fontFamily: "Roboto"),
       initialRoute: splash,
       getPages: getPages,
     );

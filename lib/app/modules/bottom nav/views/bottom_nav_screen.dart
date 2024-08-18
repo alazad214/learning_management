@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:learning_management/app/modules/profile/views/profile_screen.dart';
 import 'package:learning_management/widgtets/text1.dart';
 import 'package:learning_management/widgtets/text2.dart';
 import '../../../../widgtets/icon1.dart';
@@ -15,22 +16,27 @@ class BottomNavScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        toolbarHeight: 80,
+        toolbarHeight: 90,
         leadingWidth: double.infinity,
         leading: Row(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Container(
-                height: 45,
-                clipBehavior: Clip.antiAlias,
-                margin: const EdgeInsets.only(left: 10.0),
-                decoration: BoxDecoration(
-                    color: Colors.blueAccent.withOpacity(0.2),
-                    shape: BoxShape.circle),
-                child: Image.asset(
-                  'assets/images/icon/mypic.jpg',
-                  fit: BoxFit.cover,
-                )),
+            InkWell(
+              onTap: () {
+                Get.to(() => const ProfileScreen());
+              },
+              child: Container(
+                  height: 45,
+                  clipBehavior: Clip.antiAlias,
+                  margin: const EdgeInsets.only(left: 10.0),
+                  decoration: BoxDecoration(
+                      color: Colors.blueAccent.withOpacity(0.2),
+                      shape: BoxShape.circle),
+                  child: Image.asset(
+                    'assets/images/icon/mypic.jpg',
+                    fit: BoxFit.cover,
+                  )),
+            ),
             const Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.center,
