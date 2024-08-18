@@ -5,50 +5,47 @@ import '../controller/bottom_controller.dart';
 
 class BottomNavScreen extends StatelessWidget {
   BottomNavScreen({super.key});
-  final controller = Get.put(BottomController());
+  final BottomNavController bottomNavController =
+      Get.put(BottomNavController());
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text("Home"),
-      ),
-      bottomNavigationBar: Obx(() {
-        return SalomonBottomBar(
-          currentIndex: controller.currentIndex.value,
-          onTap: controller.changeIndex,
-          items: [
-            /// Home
-            SalomonBottomBarItem(
-              icon: const Icon(Icons.home_outlined),
-              activeIcon: Icon(Icons.home),
-              title: const Text("Home"),
-              selectedColor: Colors.purple,
-            ),
-            SalomonBottomBarItem(
-              icon: const Icon(Icons.work),
-              title: const Text("Course"),
-              selectedColor: Colors.purple,
-            ),
-            SalomonBottomBarItem(
-              icon: const Icon(Icons.shopping_cart_rounded),
-              activeIcon: const Icon(Icons.home),
-              title: const Text("Card"),
-              selectedColor: Colors.purple,
-            ),
+      body: Obx(() =>
+          bottomNavController.pages[bottomNavController.selectedIndex.value]),
+      bottomNavigationBar: Obx(() => BottomNavigationBar(
+            currentIndex: bottomNavController.selectedIndex.value,
+            elevation: 50,
+            iconSize: 30.0,
+            selectedItemColor: Colors.blueAccent,
 
-            /// Profile
-            SalomonBottomBarItem(
-              icon: Icon(Icons.person),
-              title: Text("Profile"),
-              selectedColor: Colors.teal,
-            ),
-          ],
-        );
-      }),
-      body: Obx(() {
-        return controller.pages[controller.currentIndex.value];
-      }),
+            unselectedIconTheme: const IconThemeData(color: Colors.black54),
+            unselectedItemColor: Colors.black54,
+            showUnselectedLabels: true,
+            onTap: (index) {
+              bottomNavController.changeIndex(index);
+            },
+            items: const [
+              BottomNavigationBarItem(
+                icon: Icon(
+                  Icons.home_outlined,
+                ),
+                label: 'Home',
+              ),
+              BottomNavigationBarItem(
+                icon: Icon(Icons.video_call_outlined),
+                label: 'Course',
+              ),
+              BottomNavigationBarItem(
+                icon: Icon(Icons.shopping_cart_outlined),
+                label: 'Card',
+              ),
+              BottomNavigationBarItem(
+                icon: Icon(Icons.menu),
+                label: 'More',
+              ),
+            ],
+          )),
     );
   }
 }

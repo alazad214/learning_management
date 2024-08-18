@@ -12,7 +12,7 @@ class OnboadingScreen extends StatelessWidget {
         _buildPageViewModel(
             title: "Learn new skills everyday!",
             body: "This is the first screen of the onboarding.",
-            image: const AssetImage('assets/images/onboading1.png') //
+            image: const AssetImage('assets/images/onboading2.png') //
             ),
         _buildPageViewModel(
           title: "Choose your plan!",
@@ -37,8 +37,8 @@ class OnboadingScreen extends StatelessWidget {
       next: const Icon(Icons.arrow_forward),
       done: const Text("Done", style: TextStyle(fontWeight: FontWeight.bold)),
       dotsDecorator: const DotsDecorator(
-        size: Size(10.0, 10.0),
-        activeSize: Size(22.0, 10.0),
+        size: Size.square(10.0),
+        activeSize: Size(20.0, 10.0),
         activeColor: Colors.indigoAccent,
         color: Colors.grey,
         spacing: EdgeInsets.symmetric(horizontal: 3.0),
@@ -54,11 +54,20 @@ class OnboadingScreen extends StatelessWidget {
     return PageViewModel(
       title: title,
       body: body,
-      image: Center(child: Image(image: image, width: 300, height: 300)),
+      image: Center(
+          child: Image(
+        image: image,
+        width: double.infinity,
+        height: 500,
+        fit: BoxFit.cover,
+      )),
       decoration: const PageDecoration(
+        imageFlex: 2,
+        fullScreen: true,
+        pageMargin: EdgeInsets.only(),
+        imagePadding: EdgeInsets.all(24.0),
         titleTextStyle: TextStyle(fontSize: 28.0, fontWeight: FontWeight.bold),
         bodyTextStyle: TextStyle(fontSize: 16.0, color: Colors.black54),
-        imagePadding: EdgeInsets.all(24.0),
       ),
     );
   }

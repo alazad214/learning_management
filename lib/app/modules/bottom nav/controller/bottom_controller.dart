@@ -1,25 +1,23 @@
-import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 import 'package:learning_management/app/modules/add%20to/views/add_to_screen.dart';
+import 'package:learning_management/app/modules/course/views/course_screen.dart';
+import 'package:learning_management/app/modules/home/views/home_screen.dart';
+import 'package:learning_management/app/modules/profile/views/profile_screen.dart';
 
-import '../../course/views/course_screen.dart';
-import '../../home/views/home_screen.dart';
-import '../../profile/views/profile_screen.dart';
+class BottomNavController extends GetxController {
 
-class BottomController extends GetxController {
-  // Observable index
-  var currentIndex = 0.obs;
+  var selectedIndex = 0.obs;
 
-  // List of pages
-  final List<Widget> pages = [
-    const HomeScreen(),
-    const CourseScreen(),
-    const AddToScreen(),
-    const ProfileScreen(),
+
+  final  pages = [
+    HomeScreen(),
+    CourseScreen(),
+    AddToScreen(),
+    ProfileScreen()
   ];
 
-  // Method to change index
+  // Method to change the selected index
   void changeIndex(int index) {
-    currentIndex.value = index;
+    selectedIndex.value = index;
   }
 }

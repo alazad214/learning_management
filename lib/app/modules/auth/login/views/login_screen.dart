@@ -59,7 +59,7 @@ class LoginScreen extends StatelessWidget {
             Button1(
               text: 'LOG IN',
               ontap: () {
-                Get.to(()=> BottomNavScreen());
+                Get.to(() => BottomNavScreen());
               },
             ),
             const SizedBox(height: 30.0),
