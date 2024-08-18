@@ -23,7 +23,7 @@ class LoginScreen extends StatelessWidget {
           child: SingleChildScrollView(
         child: Column(
           children: [
-            const CustomAppBar(),
+
             const Text1(
               text: "Login",
               fontweight: FontWeight.bold,

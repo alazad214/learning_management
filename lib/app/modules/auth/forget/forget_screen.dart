@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:learning_management/utils/app_colors.dart';
 import 'package:learning_management/widgtets/button1.dart';
-import 'package:learning_management/widgtets/custom_appbar.dart';
 import 'package:learning_management/widgtets/text1.dart';
 import 'package:learning_management/widgtets/text2.dart';
 import 'package:learning_management/widgtets/textfield1.dart';
@@ -17,7 +16,6 @@ class ForgetScreen extends StatelessWidget {
           child: SingleChildScrollView(
         child: Column(
           children: [
-            const CustomAppBar(),
             const Text1(
               text: "Password Recovery",
               fontweight: FontWeight.bold,
