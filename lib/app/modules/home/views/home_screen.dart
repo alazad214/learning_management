@@ -13,17 +13,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: const Text("Home"),
-          centerTitle: true,
-          leading: const Icon(
-            Icons.sort,
-            size: 30,
-          ),
-          actions: const [
-            Icon1(),
-          ],
-        ),
+
         body: const SingleChildScrollView(
           child: Padding(
             padding: EdgeInsets.symmetric(horizontal: 20, vertical: 5.0),
