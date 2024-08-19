@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:learning_management/app/modules/auth/login/views/login_screen.dart';
 import 'package:learning_management/utils/app_colors.dart';
 import 'package:learning_management/widgtets/button1.dart';
 import 'package:learning_management/widgtets/text1.dart';
@@ -10,12 +13,14 @@ class RegisterScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final screenSize = MediaQuery.of(context).size;
     return Scaffold(
       backgroundColor: AppColor.whiteC,
       body: SafeArea(
           child: SingleChildScrollView(
         child: Column(
           children: [
+            SizedBox(height: screenSize.height / 10),
             const Text1(
               text: "Register",
               fontweight: FontWeight.bold,
@@ -60,16 +65,17 @@ class RegisterScreen extends StatelessWidget {
               ontap: () {},
             ),
             const SizedBox(height: 60.0),
-            const Wrap(
+            Wrap(
               crossAxisAlignment: WrapCrossAlignment.center,
               children: [
-                Text2(
+                const Text2(
                   text: "Already have an account?  ",
                 ),
                 Text2(
-                  text: "Register",
+                  text: "Log in",
                   fontweight: FontWeight.bold,
                   color: Colors.red,
+                  ontap: () => Get.offAll(() => LoginScreen()),
                 ),
               ],
             )

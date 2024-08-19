@@ -17,13 +17,14 @@ class LoginScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final screenSize=MediaQuery.of(context).size;
     return Scaffold(
       backgroundColor: AppColor.whiteC,
       body: SafeArea(
           child: SingleChildScrollView(
         child: Column(
           children: [
-
+            SizedBox(height: screenSize.height/8),
             const Text1(
               text: "Login",
               fontweight: FontWeight.bold,

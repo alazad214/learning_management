@@ -20,6 +20,11 @@ List<dynamic> settingsUtils = [
     'text2': 'Check your skills',
   },
   {
+    "icon": "assets/images/icon/blog.png",
+    'text': 'Blogs',
+    'text2': 'Visit the blogs',
+  },
+  {
     "icon": "assets/images/icon/team.png",
     'text': 'team',
     'text2': 'About us',
@@ -27,6 +32,16 @@ List<dynamic> settingsUtils = [
   {
     "icon": "assets/images/icon/help.png",
     'text': 'Support',
+    'text2': 'Contact for any problem or query',
+  },
+  {
+    "icon": "assets/images/icon/insurance.png",
+    'text': 'Privacy Policy',
+    'text2': 'Contact for any problem or query',
+  },
+  {
+    "icon": "assets/images/icon/conditions.png",
+    'text': 'Terms And Conditions',
     'text2': 'Contact for any problem or query',
   }
 ];

@@ -52,11 +52,7 @@ class HomeScreen extends StatelessWidget {
                 CustomSeeAll(
                     title: 'Our Teachers',
                     ontap: () => Get.to(() => const TeacherScreen())),
-                const SingleChildScrollView(
-                    scrollDirection: Axis.horizontal,
-                    child: Row(
-                      children: [TeacherCard()],
-                    ))
+                const TeacherCard()
               ],
             ),
           ),
