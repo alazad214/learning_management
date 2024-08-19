@@ -14,13 +14,13 @@ class BasicInformationScreen extends StatelessWidget {
             //User name
             ProfileListtile(
               icon: Icons.person,
-              title: "Mr.Abdul Hakim,",
+              title: "Al Azad",
             ),
 
             //User Email
             ProfileListtile(
               icon: Icons.email,
-              title: "abdulhakim@gmail.com",
+              title: "alazad214@gmail.com",
             ),
 
             //User phone Number
@@ -30,7 +30,7 @@ class BasicInformationScreen extends StatelessWidget {
             ), //User phone Number
             ProfileListtile(
               icon: Icons.view_module,
-              title: "Mern Stack Developer",
+              title: "Flutter App Development",
             ),
           ],
         ),

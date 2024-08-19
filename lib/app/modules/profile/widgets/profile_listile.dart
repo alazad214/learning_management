@@ -31,18 +31,16 @@ class ProfileListtile extends StatelessWidget {
             borderRadius: BorderRadius.circular(8),
           ),
           child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            mainAxisAlignment: MainAxisAlignment.start,
             children: [
               CircleAvatar(child: Icon(icon ?? Icons.add)),
+              const SizedBox(width: 10.0),
               Text(
                 title ?? "",
                 style: const TextStyle(
                   fontSize: 18.0,
                 ),
               ),
-              SizedBox(),
-              SizedBox(),
-              SizedBox(),
               Icon(
                 arrowicon,
                 color: Colors.green,

@@ -35,11 +35,11 @@ class ProfileScreen extends StatelessWidget {
                     border: Border.all(color: Colors.blueAccent),
                     shape: BoxShape.circle,
                     image: const DecorationImage(
-                        image: AssetImage("assets/images/teacher/kibriya.jpg"),
+                        image: AssetImage("assets/images/icon/mypic.jpg"),
                         fit: BoxFit.cover)),
               ),
               const SizedBox(height: 20.0),
-              const Text1(text: 'Golam Kibriya'),
+              const Text1(text: 'Al Azad'),
               const Text2(text: 'id- 5412414', color: Colors.black54),
               const SizedBox(height: 20.0),
               const TabBar(
