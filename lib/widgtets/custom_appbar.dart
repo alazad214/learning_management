@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:learning_management/app/modules/notification/views/notification_page.dart';
 import 'package:learning_management/widgtets/text1.dart';
 import 'package:learning_management/widgtets/text2.dart';
 import '../app/modules/profile/views/profile_screen.dart';
@@ -53,11 +54,16 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
               ],
             ),
             const Spacer(),
-            const Padding(
+            Padding(
                 padding: EdgeInsets.only(right: 15.0),
-                child: Icon(
-                  Icons.notifications,
-                  size: 28,
+                child: InkWell(
+                  onTap: () {
+                    Get.to(() => NotificationPage());
+                  },
+                  child: Icon(
+                    Icons.notifications,
+                    size: 28,
+                  ),
                 ))
           ],
         ));

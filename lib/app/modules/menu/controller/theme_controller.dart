@@ -1,14 +1,27 @@
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class ThemeController extends GetxController {
-  var islanguage = false.obs;
-  var istheme = false.obs;
+  String themekey = "isDark";
+  RxBool isDark = false.obs;
 
-  void languageSwitch(bool value) {
-    islanguage.value = value;
+  @override
+  void onInit() {
+    loadTheme();
+    super.onInit();
   }
 
-  void themeSwitch(bool value) {
-    istheme.value = value;
+  loadTheme() async {
+    SharedPreferences prefe = await SharedPreferences.getInstance();
+    isDark.value = prefe.getBool(themekey) ?? false;
+    Get.changeThemeMode(isDark.value ? ThemeMode.dark : ThemeMode.light);
+  }
+
+  toggleTheme() async {
+    SharedPreferences prefe = await SharedPreferences.getInstance();
+    isDark.value = !isDark.value;
+    prefe.setBool(themekey, isDark.value);
+    Get.changeThemeMode(isDark.value ? ThemeMode.dark : ThemeMode.light);
   }
 }
