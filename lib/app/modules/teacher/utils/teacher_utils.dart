@@ -1,27 +1,27 @@
 List<dynamic> teacherUtils = [
   {
     'name': 'Golam Kibria',
-    'skill': 'Web Developer',
+    'skill': 'Html,Css, javascript, MongoDDHtml,Css, javascript, MongoDDHtml,Css, javascript, MongoDD',
+    'position': 'Web Developer',
     'image': 'assets/images/teacher/kibriya.jpg',
   },
   {
     'name': 'Sadequl Islam',
-    'skill': 'Python/Django Developer',
+    'position': 'Python/Django Developer',
+    'skill': 'Html,Css, javascript, MongoDD',
     'image': 'assets/images/teacher/sadequl.jpg',
   },
-  {
-    'name': 'Asiq Islam',
-    'skill': 'Graphics Design',
-    'image': 'assets/images/teacher/asiq.jpg',
-  },
+
   {
     'name': 'Wali Ullah',
-    'skill': 'Flutter App Developer',
+    'position': 'Flutter App Developer',
+    'skill': 'Html,Css, javascript, MongoDD',
     'image': 'assets/images/teacher/wali.png',
   },
   {
     'name': 'Asiq Islam',
-    'skill': 'Graphics Design',
+    'position': 'Graphics Design',
+    'skill': 'Html,Css, javascript, MongoDD',
     'image': 'assets/images/teacher/asiq.jpg',
   },
 ];

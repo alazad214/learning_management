@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-
+import 'package:get/get.dart';
+import '../../profile/views/teacher_details.dart';
 import '../utils/teacher_utils.dart';
 
 class TeacherCard extends StatelessWidget {
@@ -13,6 +14,11 @@ class TeacherCard extends StatelessWidget {
         children: [
           for (int i = 0; i < teacherUtils.length; i++)
             InkWell(
+              onTap: (){
+                Get.to(() => TeacherDetails(
+                  data: teacherUtils[i],
+                ));
+              },
               child: Container(
                   height: 200,
                   width: 160.0,
@@ -39,7 +45,7 @@ class TeacherCard extends StatelessWidget {
                           style: TextStyle(color: Colors.white),
                         ),
                         Text(
-                          teacherUtils[i]['skill'],
+                          teacherUtils[i]['position'],
                           style:
                               TextStyle(color: Colors.white70, fontSize: 8.0),
                         ),

@@ -39,6 +39,7 @@ dependencies:
   introduction_screen: ^3.1.14
   salomon_bottom_bar: ^3.3.2
   another_carousel_pro: ^1.0.2
+  readmore: ^3.0.0
 
 dev_dependencies:
   flutter_test:
