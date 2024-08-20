@@ -86,7 +86,8 @@ class RecordCourseCard extends StatelessWidget {
                 )
             ],
           ),
-        )
+        ),
+        SizedBox(height: 20.0,)
       ],
     );
   }

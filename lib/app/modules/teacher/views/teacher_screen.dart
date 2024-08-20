@@ -15,10 +15,8 @@ class TeacherScreen extends StatelessWidget {
       body: SingleChildScrollView(
         child: Padding(
           padding: EdgeInsets.symmetric(horizontal: 15, vertical: 10.0),
-          child: Column(
-            children: [
-              TeacherPageCard()
-            ],
+          child: Row(
+            children: [TeacherPageCard()],
           ),
         ),
       ),

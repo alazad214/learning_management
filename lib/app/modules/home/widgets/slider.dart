@@ -10,7 +10,7 @@ class Slider1 extends StatelessWidget {
     return  Container(
         height: 160.0,
         width: double.infinity,
-        margin:margin?? const EdgeInsets.all(0),
+        margin:margin?? const EdgeInsets.only(bottom: 20),
         clipBehavior: Clip.antiAlias,
         decoration: BoxDecoration(
           boxShadow: const [

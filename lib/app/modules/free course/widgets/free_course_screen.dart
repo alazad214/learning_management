@@ -10,7 +10,7 @@ class FreeCourseScreen extends StatelessWidget {
         height: 120.0,
         width: double.infinity,
         clipBehavior: Clip.antiAlias,
-        margin: const EdgeInsets.only(bottom: 10.0),
+        margin: const EdgeInsets.only(bottom: 25.0, ),
         padding: const EdgeInsets.symmetric(horizontal: 10.0),
         decoration: BoxDecoration(
             color: Colors.indigoAccent,

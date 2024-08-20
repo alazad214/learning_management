@@ -86,7 +86,8 @@ class LiveCourseCard extends StatelessWidget {
                 )
             ],
           ),
-        )
+        ),
+
       ],
     );
   }
