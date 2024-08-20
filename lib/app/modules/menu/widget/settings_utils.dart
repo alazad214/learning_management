@@ -1,11 +1,12 @@
 import 'package:learning_management/app/modules/menu/views/terms_and_conditions.dart';
+import 'package:learning_management/app/modules/profile/views/profile_screen.dart';
 
 List<dynamic> settingsUtils = [
   {
     "icon": "assets/images/icon/profile.png",
     'text': 'Profile',
     'text2': 'View your information',
-    'page': TermsAndConditions()
+    'page': ProfileScreen()
   },
   {
     "icon": "assets/images/icon/download.png",

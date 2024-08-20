@@ -3,21 +3,21 @@ List<dynamic> courseUtils = [
     "title": "Web Development",
     "description":
         "Web DevelopmentWeb DevelopmentWeb DevelopmentWeb DevelopmentWeb DevelopmentWeb DevelopmentWeb Development",
-    "image": "assets/images/course/mern.png",
+    "image": "assets/images/course/ostad_flutter.jpg",
     "course": "15"
   },
   {
     "title": "UI/UX Design",
     "description":
         "Web DevelopmentWeb DevelopmentWeb DevelopmentWeb DevelopmentWeb DevelopmentWeb DevelopmentWeb Development",
-    "image": "assets/images/course/uiux.png",
+    "image": "assets/images/course/ostad_mern.jpg",
     "course": "15"
   },
   {
     "title": "Flutter Developer",
     "description":
         "Web DevelopmentWeb DevelopmentWeb DevelopmentWeb DevelopmentWeb DevelopmentWeb DevelopmentWeb Development",
-    "image": "assets/images/course/flutter.png",
+    "image": "assets/images/course/ostad.jpg",
     "course": "15"
   },
   {
