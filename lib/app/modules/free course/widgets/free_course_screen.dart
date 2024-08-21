@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:learning_management/utils/app_icon.dart';
 
 class FreeCourseScreen extends StatelessWidget {
   const FreeCourseScreen({super.key});
@@ -6,11 +7,13 @@ class FreeCourseScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final screenSize = MediaQuery.of(context).size;
-    return  Container(
+    return Container(
         height: 120.0,
         width: double.infinity,
         clipBehavior: Clip.antiAlias,
-        margin: const EdgeInsets.only(bottom: 25.0, ),
+        margin: const EdgeInsets.only(
+          bottom: 25.0,
+        ),
         padding: const EdgeInsets.symmetric(horizontal: 10.0),
         decoration: BoxDecoration(
             color: Colors.indigoAccent,
@@ -25,8 +28,7 @@ class FreeCourseScreen extends StatelessWidget {
               children: [
                 const Text(
                   "ফ্রি -তে শিখুন",
-                  style:
-                  TextStyle(color: Colors.white, fontSize: 22),
+                  style: TextStyle(color: Colors.white, fontSize: 22),
                 ),
                 Container(
                   padding: const EdgeInsets.symmetric(
@@ -38,8 +40,7 @@ class FreeCourseScreen extends StatelessWidget {
                     children: [
                       Text(
                         "ফ্রি -তে শিখুন",
-                        style: TextStyle(
-                            color: Colors.white, fontSize: 14),
+                        style: TextStyle(color: Colors.white, fontSize: 14),
                       ),
                       Icon(
                         Icons.arrow_forward,
@@ -52,7 +53,7 @@ class FreeCourseScreen extends StatelessWidget {
               ],
             ),
             Image.asset(
-              'assets/images/icon/computer.png',
+              AppIcon.computer,
               width: screenSize.width / 5,
             )
           ],

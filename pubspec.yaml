@@ -41,6 +41,8 @@ dependencies:
   another_carousel_pro: ^1.0.2
   readmore: ^3.0.0
   shared_preferences: ^2.3.2
+  url_launcher: ^6.3.0
+
 
 dev_dependencies:
   flutter_test:
@@ -52,6 +54,15 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^4.0.0
+  flutter_launcher_icons: ^0.13.1
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/logo/applogo.png"
+  min_sdk_android: 21 # android min sdk min:16, default 21
+  web:
+    generate: true
+    image_path: "assets/logo/applogo.png"
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -70,8 +81,9 @@ flutter:
     - assets/images/slider/
     - assets/images/course/
     - assets/images/teacher/
-    - assets/images/icon/
+    - assets/icon/
     - assets/fonts/
+    - assets/logo/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

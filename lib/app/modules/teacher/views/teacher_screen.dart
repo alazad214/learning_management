@@ -2,11 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:learning_management/app/modules/teacher/views/teacher_page_card.dart';
 import 'package:learning_management/widgtets/backappbar.dart';
 
-import '../utils/teacher_utils.dart';
-
 class TeacherScreen extends StatelessWidget {
-  const TeacherScreen({super.key, this.appbar});
+  const TeacherScreen({super.key, this.appbar, this.data});
   final appbar;
+  final data;
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +14,7 @@ class TeacherScreen extends StatelessWidget {
       body: SingleChildScrollView(
         child: Padding(
           padding: EdgeInsets.symmetric(horizontal: 15, vertical: 10.0),
-          child: Row(
+          child: Column(
             children: [TeacherPageCard()],
           ),
         ),

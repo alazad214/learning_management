@@ -2,23 +2,27 @@ import 'package:flutter/material.dart';
 import 'package:learning_management/widgtets/text1.dart';
 import 'package:learning_management/widgtets/text2.dart';
 
-
 class CustomSeeAll extends StatelessWidget {
-  const CustomSeeAll({super.key, this.title, this.ontap, this.color});
+  const CustomSeeAll(
+      {super.key, this.title, this.ontap, this.color, this.viewall});
   final title;
   final ontap;
   final color;
+  final viewall;
 
   @override
   Widget build(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Text1(text: title ?? "..", color: color,),
+        Text1(
+          text: title ?? "..",
+          color: color,
+        ),
         InkWell(
           onTap: ontap,
-          child: const Text2(
-            text: "View All",
+          child: Text2(
+            text: viewall ?? "View All",
             color: Colors.blueAccent,
           ),
         ),

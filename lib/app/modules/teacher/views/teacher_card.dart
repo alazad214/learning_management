@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:learning_management/app/modules/teacher/views/teacher_screen.dart';
+import 'package:learning_management/utils/app_icon.dart';
 import '../../../../widgtets/custom_see_all.dart';
 import '../../profile/views/teacher_details.dart';
 import '../utils/teacher_utils.dart';
@@ -12,6 +13,7 @@ class TeacherCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
+        SizedBox(height: 20.0),
         CustomSeeAll(
             title: 'Our Instructor',
             ontap: () => Get.to(() => const TeacherScreen())),
@@ -41,36 +43,36 @@ class TeacherCard extends StatelessWidget {
                               image: AssetImage(teacherUtils[i]['image']),
                               fit: BoxFit.cover)),
                       child: Container(
-                        height:80,
+                        height: 80,
                         width: double.infinity,
                         color: Colors.black54,
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
-                      Column(
-                        children: [      Text(
-                          teacherUtils[i]['name'],
-                          style: const TextStyle(color: Colors.white),
-                        ),
-                          Text(
-                            teacherUtils[i]['position'],
-                            style: const TextStyle(
-                                color: Colors.white70, fontSize: 10.0),
-                          ),
-                        ],
-                      ),
-
+                            Column(
+                              children: [
+                                Text(
+                                  teacherUtils[i]['name'],
+                                  style: const TextStyle(color: Colors.white),
+                                ),
+                                Text(
+                                  teacherUtils[i]['position'],
+                                  style: const TextStyle(
+                                      color: Colors.white70, fontSize: 10.0),
+                                ),
+                              ],
+                            ),
                             Row(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Image.asset(
-                                  "assets/images/icon/facebook.png",
+                                  AppIcon.fb,
                                   height: 25,
                                   width: 25,
                                 ),
-                                SizedBox(width: 10.0),
+                                const SizedBox(width: 10.0),
                                 Image.asset(
-                                  "assets/images/icon/instagram.png",
+                                  AppIcon.insta,
                                   height: 25,
                                   width: 25,
                                 ),

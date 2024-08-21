@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 import 'package:learning_management/app/modules/profile/views/teacher_details.dart';
-
 import '../utils/teacher_utils.dart';
 
 class TeacherPageCard extends StatelessWidget {
@@ -36,7 +34,7 @@ class TeacherPageCard extends StatelessWidget {
                   children: [
                     SizedBox(
                       height: 80,
-                      width: screenSize.width/5,
+                      width: screenSize.width / 5,
                       child: Image.asset(
                         teacherUtils[i]['image'],
                         fit: BoxFit.cover,

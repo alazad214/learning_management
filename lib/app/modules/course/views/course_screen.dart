@@ -3,7 +3,6 @@ import 'package:learning_management/app/modules/free%20course/widgets/free_cours
 import 'package:learning_management/app/modules/live%20course/views/live_course_card.dart';
 import 'package:learning_management/widgtets/custom_appbar.dart';
 
-
 import '../../recoded courses/views/record_course_card.dart';
 
 class CourseScreen extends StatelessWidget {
@@ -21,8 +20,8 @@ class CourseScreen extends StatelessWidget {
               children: [
                 FreeCourseScreen(),
                 LiveCourseCard(),
+                SizedBox(height: 20.0),
                 RecordCourseCard()
-
               ],
             ),
           ),
