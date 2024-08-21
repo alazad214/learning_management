@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:learning_management/app/modules/live%20course/views/live_course_card.dart';
 import 'package:learning_management/widgtets/backappbar.dart';
+import 'live_course_card.dart';
 
 class LiveCourseScreen extends StatelessWidget {
   final data;
@@ -13,7 +13,7 @@ class LiveCourseScreen extends StatelessWidget {
         appBar: Backappbar(
           title: data['title'],
         ),
-        body: Padding(
+        body: const Padding(
           padding: EdgeInsets.all(15.0),
           child: Column(
             children: [

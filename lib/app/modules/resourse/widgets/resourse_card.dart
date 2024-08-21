@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:learning_management/widgtets/small_container.dart';
 import '../../../../widgtets/text1.dart';
 import '../../../../widgtets/text2.dart';
 
@@ -40,15 +41,9 @@ class Resoursecard extends StatelessWidget {
                   children: [
                     const Text1(text: "Module 1 Resourse", size: 18.0),
                     const SizedBox(height: 10),
-                    Container(
-                      padding: const EdgeInsets.all(10.0),
-                      decoration: BoxDecoration(
-                          color: Colors.blue.withOpacity(0.1),
-                          borderRadius: BorderRadius.circular(5.0)),
-                      child: Text2(
-                        text: date,
-                      ),
-                    ),
+                    SmallContainer(
+                      text: date,
+                    )
                   ],
                 ),
                 InkWell(

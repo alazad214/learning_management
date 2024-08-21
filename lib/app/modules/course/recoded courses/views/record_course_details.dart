@@ -1,17 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
-import 'package:learning_management/app/modules/certificate/views/certificate_screen.dart';
-import 'package:learning_management/app/modules/resourse/views/resourse_screen.dart';
-import 'package:learning_management/utils/app_icon.dart';
-import '../../../../widgtets/backappbar.dart';
-import '../../../../widgtets/text1.dart';
-import '../../../../widgtets/text2.dart';
-import '../../course module/views/module_screen.dart';
 
-class LiveCourseDetails extends StatelessWidget {
+import '../../../../../widgtets/backappbar.dart';
+import '../../../../../widgtets/text1.dart';
+import '../../../../../widgtets/text2.dart';
+
+class RecordCourseDetails extends StatelessWidget {
   final data;
-  const LiveCourseDetails(this.data, {super.key});
+  const RecordCourseDetails(this.data, {super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -59,19 +54,15 @@ class LiveCourseDetails extends StatelessWidget {
               spacing: 10,
               runSpacing: 10,
               children: [
-                _customtag('Modules', AppIcon.module, () {
-                  Get.to(() => const ModuleScreen());
-                }),
-                _customtag('Assignment', AppIcon.assignment, () {
-                  Get.to(() => const ResourseScreen());
-                }),
-                _customtag('Recorded', AppIcon.record, () {}),
-                _customtag('Recourse', AppIcon.resourse, () {
-                  Get.to(() => const ResourseScreen());
-                }),
-                _customtag('Certificate', AppIcon.certificate, () {
-                  Get.to(() => const CertificateScreen());
-                }),
+                _customtag('Modules', "assets/images/icon/module.png", () {}),
+                _customtag(
+                    'Assignment', "assets/images/icon/recourse.png", () {}),
+                _customtag(
+                    'Recorded', "assets/images/icon/recorded.png", () {}),
+                _customtag(
+                    'Recourse', "assets/images/icon/download.png", () {}),
+                _customtag(
+                    'Certificate', "assets/images/icon/certificate.png", () {}),
               ],
             )
           ],

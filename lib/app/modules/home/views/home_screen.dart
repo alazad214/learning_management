@@ -1,17 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
-import 'package:learning_management/app/modules/recoded%20courses/views/record_course_card.dart';
 import 'package:learning_management/app/modules/free%20course/widgets/free_course_screen.dart';
 import 'package:learning_management/app/modules/home/widgets/slider.dart';
 import 'package:learning_management/app/modules/my%20course/views/my_course_card.dart';
 import 'package:learning_management/app/modules/teacher/views/teacher_card.dart';
-
 import '../../../../widgtets/backappbar.dart';
 import '../../../../widgtets/custom_appbar.dart';
 import '../../../../widgtets/custom_see_all.dart';
+import '../../course/live course/views/live_course_card.dart';
+import '../../course/recoded courses/views/record_course_card.dart';
 import '../../course/views/course_screen.dart';
-import '../../live course/views/live_course_card.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -19,10 +17,10 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: CustomAppBar(),
+        appBar: const CustomAppBar(),
         body: SingleChildScrollView(
           child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: 20, vertical: 5.0),
+            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 5.0),
             child: Column(
               children: [
                 const SizedBox(height: 15.0),
