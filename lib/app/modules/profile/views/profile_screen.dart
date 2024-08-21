@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:learning_management/app/modules/profile/views/basic_information_screen.dart';
 import 'package:learning_management/app/modules/profile/views/password_screen.dart';
+import 'package:learning_management/app/modules/profile/widgets/custom_profile_pic.dart';
+import 'package:learning_management/utils/app_image.dart';
 import 'package:learning_management/widgtets/backappbar.dart';
 import 'package:learning_management/widgtets/text1.dart';
 import 'package:learning_management/widgtets/text2.dart';
@@ -14,35 +16,27 @@ class ProfileScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return DefaultTabController(
+    return const DefaultTabController(
       length: 2,
       child: Scaffold(
-        appBar: const Backappbar(title: 'Profile'),
+        appBar: Backappbar(title: 'Profile'),
         body: Padding(
-          padding: const EdgeInsets.all(20.0),
+          padding: EdgeInsets.all(20.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               //Profile image--->
-              Container(
-                height: 90,
-                width: 90,
-                clipBehavior: Clip.antiAlias,
-                alignment: Alignment.bottomRight,
-                decoration: BoxDecoration(
-                    color: Colors.blue,
-                    border: Border.all(color: Colors.blueAccent),
-                    shape: BoxShape.circle,
-                    image: const DecorationImage(
-                        image: AssetImage("assets/images/icon/mypic.jpg"),
-                        fit: BoxFit.cover)),
+              CustomProfilePic(
+                image: AppImage.mypic,
               ),
-              const SizedBox(height: 20.0),
-              const Text1(text: 'Al Azad'),
-              const Text2(text: 'id- 5412414', color: Colors.black54),
-              const SizedBox(height: 20.0),
-              const TabBar(
+              SizedBox(height: 20.0),
+              Text1(text: 'Al Azad'),
+              Text2(text: 'Flutter App Development', color: Colors.black54),
+              SizedBox(height: 20.0),
+
+              //Custom Tabbar
+              TabBar(
                   isScrollable: true,
                   labelStyle: TextStyle(
                     color: Colors.blue,
@@ -62,8 +56,8 @@ class ProfileScreen extends StatelessWidget {
                     ),
                   ]),
 
-              const SizedBox(height: 20.0),
-              const Flexible(
+              SizedBox(height: 20.0),
+              Flexible(
                 flex: 1,
                 child: TabBarView(children: [
                   BasicInformationScreen(),

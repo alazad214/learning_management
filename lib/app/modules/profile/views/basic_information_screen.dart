@@ -29,8 +29,8 @@ class BasicInformationScreen extends StatelessWidget {
               title: "01760******",
             ), //User phone Number
             ProfileListtile(
-              icon: Icons.view_module,
-              title: "Flutter App Development",
+              icon: Icons.numbers,
+              title: "421215454",
             ),
           ],
         ),
