@@ -1,24 +1,24 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:learning_management/app/modules/certificate/views/certificate_screen.dart';
-import 'package:learning_management/app/modules/resourse/views/resourse_screen.dart';
-import 'package:learning_management/utils/app_icon.dart';
-import 'package:learning_management/widgtets/small_container.dart';
-import '../../../../../widgtets/backappbar.dart';
-import '../../../../../widgtets/text1.dart';
-import '../../../../../widgtets/text2.dart';
-import '../../../course module/views/module_screen.dart';
+import 'package:learning_management/utils/app_image.dart';
+import '../../../../utils/app_icon.dart';
+import '../../../../widgtets/backappbar.dart';
+import '../../../../widgtets/small_container.dart';
+import '../../../../widgtets/text1.dart';
+import '../../../../widgtets/text2.dart';
+import '../../certificate/views/certificate_screen.dart';
+import '../../course module/views/module_screen.dart';
+import '../../resourse/views/resourse_screen.dart';
 
-class LiveCourseDetails extends StatelessWidget {
-  final data;
-  const LiveCourseDetails(this.data, {super.key});
+class BuyCourseDetails extends StatelessWidget {
+  const BuyCourseDetails({super.key});
 
   @override
   Widget build(BuildContext context) {
     final screenSize = MediaQuery.of(context).size;
     return Scaffold(
-      appBar: Backappbar(
-        title: data['title'],
+      appBar: const Backappbar(
+        title: "Flutter App Development",
       ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 15.0, vertical: 15.0),
@@ -29,7 +29,7 @@ class LiveCourseDetails extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 Image.asset(
-                  data['image'],
+                  AppImage.mypic,
                   height: 90.0,
                   width: screenSize.width / 2.5,
                   fit: BoxFit.cover,
@@ -39,7 +39,7 @@ class LiveCourseDetails extends StatelessWidget {
                   child: Column(
                     children: [
                       Text1(
-                        text: data['title'],
+                        text: "Flutter App Development",
                       ),
                       const SizedBox(height: 10.0),
                       const SmallContainer(
@@ -52,7 +52,7 @@ class LiveCourseDetails extends StatelessWidget {
             ),
             const SizedBox(height: 10.0),
             Text(
-              data['description'],
+              "faudfkjasldkjflk;asjdf;lkjasd;lkfj;laksdjf;lka;lsidjfoiaejfgjasdklfjasidjflkajsdkjfasdjf",
             ),
             const Divider(height: 15),
             const SizedBox(height: 10.0),
@@ -94,6 +94,7 @@ class LiveCourseDetails extends StatelessWidget {
       ),
     );
   }
+
 
   _customtag(text, image, ontap) {
     return InkWell(

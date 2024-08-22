@@ -2,12 +2,6 @@ import 'package:learning_management/app/modules/menu/views/terms_and_conditions.
 
 List<dynamic> settingsUtils = [
   {
-    "icon": "assets/icon/skill.png",
-    'text': 'Skills',
-    'text2': 'Check your skills',
-    'page': const TermsAndConditions()
-  },
-  {
     "icon": "assets/icon/blog.png",
     'text': 'Blogs',
     'text2': 'Visit the blogs',
@@ -29,7 +23,7 @@ List<dynamic> settingsUtils = [
     "icon": "assets/icon/insurance.png",
     'text': 'Privacy Policy',
     'text2': 'Contact for any problem or query',
-    'page': TermsAndConditions()
+    'page': const TermsAndConditions()
   },
   {
     "icon": "assets/icon/conditions.png",

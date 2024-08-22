@@ -25,18 +25,13 @@ class ThemeLagnuage extends StatelessWidget {
                   ' BANGLA',
                   style: const TextStyle(fontSize: 20),
                 ),
-                InkWell(
-                  onTap: () {
-                    themeController.toggleTheme();
-                  },
-                  child: Switch(
-                    value: themeController.isDark.value,
-                    onChanged: themeController.isDark,
-                    activeColor: Colors.blue,
-                    activeTrackColor: Colors.lightBlueAccent,
-                    inactiveThumbColor: Colors.grey,
-                    inactiveTrackColor: Colors.grey[300],
-                  ),
+                Switch(
+                  value: false,
+                  onChanged: themeController.isDarkMode,
+                  activeColor: Colors.blue,
+                  activeTrackColor: Colors.lightBlueAccent,
+                  inactiveThumbColor: Colors.grey,
+                  inactiveTrackColor: Colors.grey[300],
                 )
               ],
             ),
@@ -45,16 +40,18 @@ class ThemeLagnuage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  themeController.isDark.value ? 'LIGHT MODE' : ' DARK MODE',
+                  themeController.isDarkMode.value
+                      ? 'LIGHT MODE'
+                      : ' DARK MODE',
                   style: const TextStyle(fontSize: 20),
                 ),
                 InkWell(
                   onTap: () {
-                    themeController.toggleTheme();
+                    themeController.toggoleTheme();
                   },
                   child: Switch(
-                    value: themeController.isDark.value,
-                    onChanged: (value) => themeController.toggleTheme(),
+                    value: themeController.isDarkMode.value,
+                    onChanged: (value) => themeController.toggoleTheme(),
                     activeColor: Colors.blue,
                     activeTrackColor: Colors.lightBlueAccent,
                     inactiveThumbColor: Colors.grey,

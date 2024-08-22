@@ -1,22 +1,26 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:learning_management/app/modules/buy%20course/views/buy_course_details.dart';
 import '../../../../widgtets/custom_see_all.dart';
 import '../../course/views/course_utils.dart';
-import '../../teacher/views/teacher_screen.dart';
 
-class MyCourseCard extends StatelessWidget {
-  const MyCourseCard({super.key});
+class BuyCourseCard extends StatelessWidget {
+  const BuyCourseCard({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
-        CustomSeeAll(
-            title: 'My Courses',
-            ontap: () => Get.to(() => const TeacherScreen())),
+        const CustomSeeAll(
+          title: 'My Courses',
+          viewall: '',
+        ),
         const SizedBox(height: 15.0),
         for (int i = 0; i < 2; i++)
           InkWell(
+            onTap: () {
+              Get.to(() => BuyCourseDetails());
+            },
             child: Container(
               height: 80.0,
               width: double.infinity,
