@@ -3,8 +3,8 @@ import 'package:learning_management/app/modules/course/live%20course/views/widge
 import 'package:learning_management/app/modules/course/live%20course/widgets/live_class_card.dart';
 import 'package:learning_management/widgtets/text1.dart';
 import '../../../../../widgtets/backappbar.dart';
+import '../../../../../widgtets/small_container.dart';
 import '../../../../../widgtets/text2.dart';
-
 
 class LiveCourseDetails extends StatelessWidget {
   final data;
@@ -31,7 +31,10 @@ class LiveCourseDetails extends StatelessWidget {
             const Divider(height: 15),
             const SizedBox(height: 10.0),
             const Wrap(
+              spacing: 5.0,
+              runSpacing: 5.0,
               children: [
+                LiveClassCard(),
                 LiveClassCard(),
                 LiveClassCard(),
                 LiveClassCard(),
@@ -54,22 +57,37 @@ class LiveCourseDetails extends StatelessWidget {
             const SizedBox(height: 20.0),
             Container(
               clipBehavior: Clip.antiAlias,
+              padding: const EdgeInsets.all(10.0),
+              margin: const EdgeInsets.only(bottom: 10.0),
               decoration: BoxDecoration(
-                color: Colors.green,
-                borderRadius: BorderRadius.circular(15.0),
-              ),
-              child: const ExpansionTile(
-                title: Text('Expansion Tile 1'),
-                subtitle: Text('Tap to expand'),
-                leading: Text("1"),
-                trailing: Text("1"),
+                  borderRadius: BorderRadius.circular(8.0),
+                  border: Border.all(width: 0.5)),
+              child: ExpansionTile(
+                title: Row(
+                  children: [
+                    SmallContainer(
+                      text: 'Module 1',
+                    ),
+                    Spacer(),
+                    Text1(
+                      text: "Dart Basic",
+                      color: Colors.blue,
+                    ),
+                    SizedBox(
+                      height: 10.0,
+                    )
+                  ],
+                ),
+                subtitle:
+                    const Text('learn a DART basic consept in this module'),
+                trailing: const Icon(Icons.keyboard_arrow_down_rounded),
                 children: [
-                  ListTile(
-                    title: Text('Child 1'),
-                  ),
-                  ListTile(
-                    title: Text('Child 2'),
-                  ),
+                  const Divider(),
+                  for (int i = 0; i < 5; i++)
+                    const ListTile(
+                      title: Text('Day 1'),
+                      subtitle: Text('Introduction to DART for beginners'),
+                    ),
                 ],
               ),
             ),
