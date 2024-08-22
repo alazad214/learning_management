@@ -38,6 +38,7 @@ class LiveCourseDetails extends StatelessWidget {
                 LiveClassCard(),
                 LiveClassCard(),
                 LiveClassCard(),
+                LiveClassCard(),
               ],
             ),
             const Row(

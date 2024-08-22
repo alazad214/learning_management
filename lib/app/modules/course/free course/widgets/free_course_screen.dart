@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:learning_management/utils/app_icon.dart';
+
+import 'free_course_details.dart';
 
 class FreeCourseScreen extends StatelessWidget {
   const FreeCourseScreen({super.key});
@@ -30,24 +33,27 @@ class FreeCourseScreen extends StatelessWidget {
                   "ফ্রি -তে শিখুন",
                   style: TextStyle(color: Colors.white, fontSize: 22),
                 ),
-                Container(
-                  padding: const EdgeInsets.symmetric(
-                      horizontal: 10.0, vertical: 5.0),
-                  decoration: BoxDecoration(
-                      color: Colors.blue,
-                      borderRadius: BorderRadius.circular(10.0)),
-                  child: const Row(
-                    children: [
-                      Text(
-                        "ফ্রি -তে শিখুন",
-                        style: TextStyle(color: Colors.white, fontSize: 14),
-                      ),
-                      Icon(
-                        Icons.arrow_forward,
-                        color: Colors.white,
-                        size: 20.0,
-                      )
-                    ],
+                InkWell(
+                  onTap: () => Get.to(() => const FreeCourseDetails()),
+                  child: Container(
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 10.0, vertical: 5.0),
+                    decoration: BoxDecoration(
+                        color: Colors.blue,
+                        borderRadius: BorderRadius.circular(10.0)),
+                    child: const Row(
+                      children: [
+                        Text(
+                          "ফ্রি -তে শিখুন",
+                          style: TextStyle(color: Colors.white, fontSize: 14),
+                        ),
+                        Icon(
+                          Icons.arrow_forward,
+                          color: Colors.white,
+                          size: 20.0,
+                        )
+                      ],
+                    ),
                   ),
                 )
               ],
