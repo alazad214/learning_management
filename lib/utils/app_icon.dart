@@ -8,4 +8,8 @@ class AppIcon {
   static String computer = "assets/icon/computer.png";
   static String fb = "assets/icon/facebook.png";
   static String insta = "assets/icon/instagram.png";
+  static String project = "assets/icon/project.png";
+  static String pre_recorded = "assets/icon/pre_recorded.png";
+  static String plan = "assets/icon/web.png";
+  static String liveClass = "assets/icon/liveClass.png";
 }

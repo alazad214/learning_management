@@ -26,7 +26,7 @@ class SettingsCard extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Image.asset(
-              icon ?? 'assets/images/icon/profile.png',
+              icon ?? 'assets/icon/skill.png',
               height: 40,
             ),
             const SizedBox(width: 10.0),
