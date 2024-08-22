@@ -14,13 +14,9 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
     return Container(
         height: preferredSize.height,
         padding: EdgeInsets.only(top: MediaQuery.of(context).padding.top),
-        decoration: BoxDecoration(
-          gradient: LinearGradient(
-            colors: [Colors.blue, Colors.blue.withOpacity(0.1)],
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight,
-          ),
-          boxShadow: const [
+        decoration: const BoxDecoration(
+          color: Colors.blue,
+          boxShadow: [
             BoxShadow(color: Colors.black26, blurRadius: 4, spreadRadius: 1),
           ],
         ),
@@ -47,23 +43,27 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text1(text: "Al Azad"),
+                Text1(
+                  text: "Al Azad",
+                  color: Colors.white,
+                ),
                 Text2(
-                  text: "Flutter Development",
-                  color: Colors.black54,
+                  text: "ID-452585",
+                  color: Colors.white70,
                 )
               ],
             ),
             const Spacer(),
             Padding(
-                padding: EdgeInsets.only(right: 15.0),
+                padding: const EdgeInsets.only(right: 15.0),
                 child: InkWell(
                   onTap: () {
-                    Get.to(() => NotificationPage());
+                    Get.to(() => const NotificationPage());
                   },
-                  child: Icon(
+                  child: const Icon(
                     Icons.notifications,
                     size: 28,
+                    color: Colors.white,
                   ),
                 ))
           ],
@@ -71,5 +71,5 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   }
 
   @override
-  Size get preferredSize => const Size.fromHeight(110);
+  Size get preferredSize => const Size.fromHeight(130);
 }

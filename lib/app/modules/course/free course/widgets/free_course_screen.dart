@@ -16,7 +16,7 @@ class FreeCourseScreen extends StatelessWidget {
         ),
         padding: const EdgeInsets.symmetric(horizontal: 10.0),
         decoration: BoxDecoration(
-            color: Colors.indigoAccent,
+            color: Colors.red,
             border: Border.all(width: 0.1),
             borderRadius: BorderRadius.circular(8.0)),
         child: Row(

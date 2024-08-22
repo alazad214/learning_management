@@ -4,6 +4,7 @@ import 'package:learning_management/app/modules/onboading/views/onboading_screen
 import 'package:learning_management/app/modules/splash/views/splash_screen.dart';
 import '../modules/auth/login/views/login_screen.dart';
 import '../modules/course/views/course_screen.dart';
+import '../modules/notification/views/notification_page.dart';
 import '../modules/splash/bindigns/splash_bindings.dart';
 
 //INITIAL UNIQUE ROUTE NAME
@@ -12,6 +13,7 @@ const String home = '/HomeScreen';
 const String onboading = '/onboading_screen';
 const String login = '/login_screen';
 const String course = '/course_screen';
+const String notification = '/notification_screen';
 
 List<GetPage> getPages = [
   GetPage(
@@ -34,5 +36,8 @@ List<GetPage> getPages = [
   GetPage(
     name: course,
     page: () => const CourseScreen(),
+  ),  GetPage(
+    name: notification,
+    page: () => const NotificationPage(),
   ),
 ];

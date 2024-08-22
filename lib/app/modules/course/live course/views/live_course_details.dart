@@ -1,15 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:learning_management/app/modules/certificate/views/certificate_screen.dart';
 import 'package:learning_management/app/modules/course/live%20course/views/widgets/live_details_main.dart';
 import 'package:learning_management/app/modules/course/live%20course/widgets/live_class_card.dart';
-import 'package:learning_management/app/modules/menu/widget/settings_card.dart';
-import 'package:learning_management/app/modules/resourse/views/resourse_screen.dart';
-import 'package:learning_management/utils/app_icon.dart';
 import 'package:learning_management/widgtets/text1.dart';
 import '../../../../../widgtets/backappbar.dart';
 import '../../../../../widgtets/text2.dart';
-import '../../../course module/views/module_screen.dart';
+
 
 class LiveCourseDetails extends StatelessWidget {
   final data;
@@ -17,7 +12,6 @@ class LiveCourseDetails extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final screenSize = MediaQuery.of(context).size;
     return Scaffold(
       appBar: Backappbar(
         title: data['title'],
