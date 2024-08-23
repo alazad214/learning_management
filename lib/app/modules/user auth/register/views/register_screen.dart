@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:learning_management/utils/app_colors.dart';
+import 'package:learning_management/utils/colors.dart';
 import 'package:learning_management/widgtets/button1.dart';
 import 'package:learning_management/widgtets/text1.dart';
 import 'package:learning_management/widgtets/text2.dart';
 import 'package:learning_management/widgtets/textfield1.dart';
-
 import '../../login/views/login_screen.dart';
+import '../../widget/auth_fotter_text.dart';
 
 class RegisterScreen extends StatelessWidget {
   const RegisterScreen({super.key});
@@ -15,7 +15,7 @@ class RegisterScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final screenSize = MediaQuery.of(context).size;
     return Scaffold(
-      backgroundColor: AppColor.whiteC,
+      backgroundColor: AppColor.white,
       body: SafeArea(
           child: SingleChildScrollView(
         child: Column(
@@ -64,20 +64,10 @@ class RegisterScreen extends StatelessWidget {
               text: 'REGISTER',
               ontap: () {},
             ),
-            const SizedBox(height: 60.0),
-            Wrap(
-              crossAxisAlignment: WrapCrossAlignment.center,
-              children: [
-                const Text2(
-                  text: "Already have an account?  ",
-                ),
-                Text2(
-                  text: "Log in",
-                  fontweight: FontWeight.bold,
-                  color: Colors.red,
-                  ontap: () => Get.offAll(() => LoginScreen()),
-                ),
-              ],
+            AuthFotterText(
+              text: "Already have an account?  ",
+              pagename: 'Log in',
+              ontap: () => Get.to(() => const LoginScreen()),
             )
           ],
         ),

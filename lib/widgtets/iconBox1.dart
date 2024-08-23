@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../utils/colors.dart';
+
 class Iconbox1 extends StatelessWidget {
   final image;
   final color;
@@ -13,7 +15,7 @@ class Iconbox1 extends StatelessWidget {
             padding: const EdgeInsets.all(5.0),
             margin: const EdgeInsets.symmetric(horizontal: 5.0),
             decoration: BoxDecoration(
-                color: color ?? Colors.blue, shape: BoxShape.circle),
+                color: color ??AppColor.grey,  shape: BoxShape.circle),
             child: Image.asset(
               image ?? "assets/images/fb.png",
               height: 40,

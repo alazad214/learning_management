@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:learning_management/utils/app_image.dart';
+import 'package:learning_management/utils/colors.dart';
 import 'package:learning_management/widgtets/text1.dart';
 import 'package:learning_management/widgtets/text2.dart';
-import '../app/modules/home section/notification/views/notification_page.dart';
+import '../app/modules/notification/views/notification_page.dart';
 import '../app/modules/profile/views/profile_screen.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
@@ -14,10 +15,10 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
     return Container(
         height: preferredSize.height,
         padding: EdgeInsets.only(top: MediaQuery.of(context).padding.top),
-        decoration: const BoxDecoration(
-          color: Colors.blue,
+        decoration: BoxDecoration(
+          color: AppColor.secondary,
           boxShadow: [
-            BoxShadow(color: Colors.black26, blurRadius: 4, spreadRadius: 1),
+            BoxShadow(color: AppColor.black3, blurRadius: 4, spreadRadius: 1),
           ],
         ),
         child: Row(
@@ -39,17 +40,17 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                     fit: BoxFit.cover,
                   )),
             ),
-            const Column(
+            Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text1(
                   text: "Al Azad",
-                  color: Colors.white,
+                  color: AppColor.white,
                 ),
                 Text2(
                   text: "ID-452585",
-                  color: Colors.white70,
+                  color: AppColor.white2,
                 )
               ],
             ),
@@ -63,7 +64,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                   child: const Icon(
                     Icons.notifications,
                     size: 28,
-                    color: Colors.white,
+                    color: AppColor.white,
                   ),
                 ))
           ],

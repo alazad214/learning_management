@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:learning_management/utils/colors.dart';
 
 class Button1 extends StatelessWidget {
   final text;
@@ -15,8 +16,7 @@ class Button1 extends StatelessWidget {
         width: w / 2,
         alignment: Alignment.center,
         decoration: BoxDecoration(
-          color: Colors.redAccent,
-
+          color: AppColor.red,
           borderRadius: BorderRadius.circular(8.0),
         ),
         child: Text(

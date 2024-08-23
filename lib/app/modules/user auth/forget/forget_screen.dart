@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:learning_management/utils/app_colors.dart';
+import 'package:learning_management/utils/colors.dart';
 import 'package:learning_management/widgtets/backappbar.dart';
 import 'package:learning_management/widgtets/button1.dart';
 import 'package:learning_management/widgtets/text1.dart';
@@ -13,7 +13,7 @@ class ForgetScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final screenSize=MediaQuery.of(context).size;
     return Scaffold(
-      backgroundColor: AppColor.whiteC,
+      backgroundColor: AppColor.white,
       appBar: const Backappbar(title: 'Forget Password'),
       body: SafeArea(
           child: SingleChildScrollView(

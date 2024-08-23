@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:learning_management/utils/app_colors.dart';
+import 'package:learning_management/utils/colors.dart';
 import 'package:learning_management/widgtets/button1.dart';
 import 'package:learning_management/widgtets/iconBox1.dart';
 import 'package:learning_management/widgtets/text1.dart';
 import 'package:learning_management/widgtets/text2.dart';
 import 'package:learning_management/widgtets/textfield1.dart';
-import '../../../navigation bar/views/bottom_nav_screen.dart';
+import '../../../../section/navigation bar/views/bottom_nav_screen.dart';
 import '../../forget/forget_screen.dart';
 import '../../register/views/register_screen.dart';
+import '../../widget/auth_fotter_text.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -17,12 +18,13 @@ class LoginScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final screenSize = MediaQuery.of(context).size;
     return Scaffold(
-      backgroundColor: AppColor.whiteC,
+      backgroundColor: AppColor.white,
       body: SafeArea(
           child: SingleChildScrollView(
         child: Column(
           children: [
             SizedBox(height: screenSize.height / 8),
+            //LOGIN PAGE TITLE AND SUBTITLE
             const Text1(
               text: "Login",
               fontweight: FontWeight.bold,
@@ -35,6 +37,8 @@ class LoginScreen extends StatelessWidget {
             const SizedBox(
               height: 20.0,
             ),
+
+            //TEXTFIELD
             const Textfield1(
               hinttext: Text("Email"),
               suffixicon: Icons.email_outlined,
@@ -45,9 +49,11 @@ class LoginScreen extends StatelessWidget {
               suffixicon: Icons.remove_red_eye,
             ),
             const SizedBox(height: 15.0),
+
+            //FORGET BUTTON
             Text2(
               text: "Forget password?",
-              color: Colors.blueAccent,
+              color: AppColor.primary,
               padding: const EdgeInsets.only(right: 20),
               alignment: Alignment.centerRight,
               ontap: () {
@@ -55,6 +61,8 @@ class LoginScreen extends StatelessWidget {
               },
             ),
             const SizedBox(height: 30.0),
+
+            //SUBMIT BUTTON
             Button1(
               text: 'LOG IN',
               ontap: () {
@@ -62,6 +70,8 @@ class LoginScreen extends StatelessWidget {
               },
             ),
             const SizedBox(height: 30.0),
+
+            //SOCIAL MEDIA AUTHENTICATION
             const Row(
               children: [
                 Flexible(child: Divider()),
@@ -72,37 +82,24 @@ class LoginScreen extends StatelessWidget {
               ],
             ),
             const SizedBox(height: 15.0),
-            const Row(
+
+            Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Iconbox1(
-                  color: Colors.grey,
                   image: "assets/images/fb.png",
                 ),
                 Iconbox1(
-                  color: Colors.grey,
                   image: "assets/images/google.png",
                 ),
               ],
             ),
-            const SizedBox(height: 60.0),
-            Wrap(
-              crossAxisAlignment: WrapCrossAlignment.center,
-              children: [
-                const Text2(
-                  text: "Don't have an accoutn?  ",
-                ),
-                InkWell(
-                  onTap: () {
-                    Get.to(() => const RegisterScreen());
-                  },
-                  child: const Text2(
-                    text: "Register",
-                    fontweight: FontWeight.bold,
-                    color: Colors.red,
-                  ),
-                ),
-              ],
+
+            //DON'T HAVE AN ACCOUNT
+            AuthFotterText(
+              text: "Don't have an accout?  ",
+              pagename: 'Register',
+              ontap: () => Get.to(() => const RegisterScreen()),
             )
           ],
         ),

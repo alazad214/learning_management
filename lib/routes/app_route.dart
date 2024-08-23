@@ -1,12 +1,11 @@
 import 'package:get/get_navigation/src/routes/get_route.dart';
 import 'package:learning_management/app/modules/onboading/views/onboading_screen.dart';
 import 'package:learning_management/app/modules/splash/views/splash_screen.dart';
-
-import '../app/modules/course section/views/course_screen.dart';
-import '../app/modules/home section/notification/views/notification_page.dart';
-import '../app/modules/home section/views/home_screen.dart';
+import '../app/modules/notification/views/notification_page.dart';
 import '../app/modules/splash/bindigns/splash_bindings.dart';
 import '../app/modules/user auth/login/views/login_screen.dart';
+import '../app/section/course section/views/course_screen.dart';
+import '../app/section/home section/views/home_screen.dart';
 
 
 //INITIAL UNIQUE ROUTE NAME

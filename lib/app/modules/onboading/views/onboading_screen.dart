@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:introduction_screen/introduction_screen.dart';
+import 'package:learning_management/utils/colors.dart';
 
 class OnboadingScreen extends StatelessWidget {
   const OnboadingScreen({super.key});
@@ -35,12 +36,13 @@ class OnboadingScreen extends StatelessWidget {
       skip: const Text("Skip"),
       back: const Icon(Icons.arrow_forward),
       next: const Icon(Icons.arrow_forward),
-      done: const Text("Done", style: TextStyle(fontWeight: FontWeight.bold)),
-      dotsDecorator: const DotsDecorator(
+      done: Text("Done",
+          style: TextStyle(fontWeight: FontWeight.bold, color: AppColor.black)),
+      dotsDecorator: DotsDecorator(
         size: Size.square(10.0),
         activeSize: Size(20.0, 10.0),
-        activeColor: Colors.indigoAccent,
-        color: Colors.grey,
+        activeColor: AppColor.primary,
+        color: AppColor.grey,
         spacing: EdgeInsets.symmetric(horizontal: 3.0),
       ),
     );
@@ -61,13 +63,13 @@ class OnboadingScreen extends StatelessWidget {
         height: 500,
         fit: BoxFit.cover,
       )),
-      decoration: const PageDecoration(
+      decoration: PageDecoration(
         imageFlex: 2,
         fullScreen: true,
-        pageMargin: EdgeInsets.only(),
         imagePadding: EdgeInsets.all(24.0),
-        titleTextStyle: TextStyle(fontSize: 28.0, fontWeight: FontWeight.bold),
-        bodyTextStyle: TextStyle(fontSize: 16.0, color: Colors.black54),
+        titleTextStyle: TextStyle(
+            fontSize: 28.0, fontWeight: FontWeight.bold, color: AppColor.black),
+        bodyTextStyle: TextStyle(fontSize: 16.0, color: AppColor.black2),
       ),
     );
   }

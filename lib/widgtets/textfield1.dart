@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:learning_management/utils/colors.dart';
 
 class Textfield1 extends StatelessWidget {
   const Textfield1(
@@ -29,16 +30,16 @@ class Textfield1 extends StatelessWidget {
           suffixIcon: Icon(suffixicon),
           filled: true,
           fillColor: Colors.white,
-          labelStyle: const TextStyle(color: Colors.blueGrey),
+          labelStyle: const TextStyle(color:AppColor.grey,),
           //enable-->
           enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(8.0),
-            borderSide: const BorderSide(color: Colors.blueAccent, width: 1),
+            borderSide:  BorderSide(color: AppColor.primary, width: 1),
           ),
           //focus-->
           focusedBorder: OutlineInputBorder(
             borderSide: const BorderSide(
-              color: Colors.blueAccent,
+              color: AppColor.primary,
               width: 2,
             ),
             borderRadius: BorderRadius.circular(8.0),
@@ -46,7 +47,7 @@ class Textfield1 extends StatelessWidget {
           //focus-->
           errorBorder: OutlineInputBorder(
             borderSide: const BorderSide(
-              color: Colors.red,
+              color:AppColor.red,
               width: 2,
             ),
             borderRadius: BorderRadius.circular(8.0),
