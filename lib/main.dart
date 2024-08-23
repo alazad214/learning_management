@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
+import 'package:learning_management/routes/app_route.dart';
 import 'package:learning_management/utils/app_string.dart';
-import 'app/modules/menu/controller/theme_controller.dart';
-import 'app/routes/app_route.dart';
+import 'app/modules/menu section/controller/theme_controller.dart';
 
 void main() async {
   runApp(MyApp());
