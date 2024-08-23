@@ -1,7 +1,12 @@
-
 import '../views/terms_and_conditions.dart';
 
 List<dynamic> settingsUtils = [
+  {
+    "icon": "assets/icon/profile.png",
+    'text': 'Profile',
+    'text2': 'Visit Your Profile',
+    'page': const TermsAndConditions()
+  },
   {
     "icon": "assets/icon/blog.png",
     'text': 'Blogs',
@@ -10,8 +15,8 @@ List<dynamic> settingsUtils = [
   },
   {
     "icon": "assets/icon/team.png",
-    'text': 'team',
-    'text2': 'About us',
+    'text': 'About Us',
+    'text2': '',
     'page': const TermsAndConditions()
   },
   {
