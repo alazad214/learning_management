@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:learning_management/widgtets/custom_appbar.dart';
 import '../controller/bottom_controller.dart';
 
 class BottomNavScreen extends StatelessWidget {

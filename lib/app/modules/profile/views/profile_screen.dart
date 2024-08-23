@@ -1,6 +1,4 @@
-import 'dart:io';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:learning_management/app/modules/profile/views/basic_information_screen.dart';
 import 'package:learning_management/app/modules/profile/views/password_screen.dart';
 import 'package:learning_management/app/modules/profile/widgets/custom_profile_pic.dart';
@@ -9,7 +7,6 @@ import 'package:learning_management/widgtets/backappbar.dart';
 import 'package:learning_management/widgtets/text1.dart';
 import 'package:learning_management/widgtets/text2.dart';
 
-import '../widgets/profile_listile.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});

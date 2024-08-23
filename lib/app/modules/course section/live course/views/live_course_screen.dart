@@ -8,6 +8,7 @@ class LiveCourseScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // ignore: unused_local_variable
     final screenSize = MediaQuery.of(context).size;
     return Scaffold(
         appBar: Backappbar(

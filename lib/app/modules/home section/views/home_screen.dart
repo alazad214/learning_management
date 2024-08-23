@@ -3,9 +3,9 @@ import 'package:get/get.dart';
 import '../../../../widgtets/backappbar.dart';
 import '../../../../widgtets/custom_appbar.dart';
 import '../../../../widgtets/custom_see_all.dart';
-import '../../course section/buy course/views/buy_course_card.dart';
 import '../../course section/free course/widgets/free_course_screen.dart';
 import '../../course section/live course/views/live_course_card.dart';
+import '../../course section/my course/views/buy_course_card.dart';
 import '../../course section/recoded courses/views/record_course_card.dart';
 import '../../course section/views/course_screen.dart';
 

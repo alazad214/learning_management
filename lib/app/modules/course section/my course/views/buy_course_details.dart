@@ -7,8 +7,8 @@ import '../../../../../widgtets/small_container.dart';
 import '../../../../../widgtets/text1.dart';
 import '../../../../../widgtets/text2.dart';
 import '../../../home section/resourse/views/resourse_screen.dart';
-import '../../certificate/views/certificate_screen.dart';
 import '../../course module/views/module_screen.dart';
+import '../certificate/views/certificate_screen.dart';
 
 
 class BuyCourseDetails extends StatelessWidget {
