@@ -7,6 +7,7 @@ class Text1 extends StatelessWidget {
   final fontweight;
   final padding;
   final ontap;
+  final maxline;
   const Text1(
       {super.key,
       this.text,
@@ -14,7 +15,7 @@ class Text1 extends StatelessWidget {
       this.size,
       this.fontweight,
       this.padding,
-      this.ontap});
+      this.ontap, this.maxline});
 
   @override
   Widget build(BuildContext context) {
@@ -25,6 +26,7 @@ class Text1 extends StatelessWidget {
         child: Text(
           text!,
           overflow: TextOverflow.ellipsis,
+          maxLines: maxline??1,
           style: TextStyle(
               color: color ?? Colors.black,
               fontSize: size ?? 18.0,

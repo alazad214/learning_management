@@ -1,5 +1,6 @@
 import 'package:learning_management/app/modules/profile/views/profile_screen.dart';
 import 'package:learning_management/app/modules/support/views/support_screen.dart';
+import '../../../modules/about us/views/about_us_screen.dart';
 import '../../../modules/privacy policy/views/privacy_policy_screen.dart';
 import '../../../modules/terms conditions/views/terms_and_conditions.dart';
 
@@ -20,7 +21,7 @@ List<dynamic> settingsUtils = [
     "icon": "assets/icon/team.png",
     'text': 'About Us',
     'text2': '',
-    'page': const TermsAndConditions()
+    'page': const AboutUsScreen()
   },
   {
     "icon": "assets/icon/help.png",
