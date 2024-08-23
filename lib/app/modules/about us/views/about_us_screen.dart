@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:learning_management/app/modules/user%20auth/widget/auth_fotter_text.dart';
 import 'package:learning_management/widgtets/backappbar.dart';
+import 'package:learning_management/widgtets/row_icon_text.dart';
 import 'package:learning_management/widgtets/text1.dart';
-import 'package:learning_management/widgtets/text2.dart';
 
 class AboutUsScreen extends StatelessWidget {
   const AboutUsScreen({super.key});
@@ -28,23 +27,10 @@ class AboutUsScreen extends StatelessWidget {
                 fontweight: FontWeight.bold,
               ),
               SizedBox(height: 30),
-              Row(
-                children: [
-                  Icon(Icons.phone),
-                  Text1(
-                    text: '+880 17655***',
-                  ),
-                ],
-              ),
+              RowIconText(text: '+880 17655***', icon: Icons.phone),
               SizedBox(height: 15),
-              Row(
-                children: [
-                  Icon(Icons.mail),
-                  Text1(
-                    text: 'alazadcmt@gmail.com',
-                  ),
-                ],
-              ),
+              RowIconText(text: 'alazadcmt@gmail.com', icon: Icons.mail),
+              SizedBox(height: 15),
             ],
           ),
         ),

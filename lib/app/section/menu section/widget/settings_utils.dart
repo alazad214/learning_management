@@ -12,12 +12,6 @@ List<dynamic> settingsUtils = [
     'page': const ProfileScreen()
   },
   {
-    "icon": "assets/icon/blog.png",
-    'text': 'Blogs',
-    'text2': 'Visit the blogs',
-    'page': const TermsAndConditions()
-  },
-  {
     "icon": "assets/icon/team.png",
     'text': 'About Us',
     'text2': '',
