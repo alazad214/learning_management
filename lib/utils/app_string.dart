@@ -1,4 +1,4 @@
 class AppString {
   ///APP NAME
-  static const String name = "Learning Managemant";
+  static const String name = "LMS";
 }
