@@ -12,4 +12,6 @@ class AppIcon {
   static String pre_recorded = "assets/icon/pre_recorded.png";
   static String plan = "assets/icon/web.png";
   static String liveClass = "assets/icon/liveClass.png";
+  static String call = "assets/icon/call.png";
+  static String email = "assets/icon/email.png";
 }

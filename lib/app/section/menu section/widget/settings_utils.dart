@@ -1,4 +1,5 @@
 import 'package:learning_management/app/modules/profile/views/profile_screen.dart';
+import 'package:learning_management/app/modules/support/views/support_screen.dart';
 import '../../../modules/privacy policy/views/privacy_policy_screen.dart';
 import '../../../modules/terms conditions/views/terms_and_conditions.dart';
 
@@ -25,7 +26,7 @@ List<dynamic> settingsUtils = [
     "icon": "assets/icon/help.png",
     'text': 'Support',
     'text2': 'Contact for any problem or query',
-    'page': const TermsAndConditions()
+    'page': const SupportScreen()
   },
   {
     "icon": "assets/icon/insurance.png",
