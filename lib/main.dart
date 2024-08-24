@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:learning_management/routes/app_route.dart';
-import 'package:learning_management/utils/app_string.dart';
-
+import 'package:learning_management/utils/app_config.dart';
 import 'app/section/menu section/controller/theme_controller.dart';
 
 void main() async {
@@ -11,8 +10,7 @@ void main() async {
   runApp(MyApp());
   SystemChrome.setSystemUIOverlayStyle(
       const SystemUiOverlayStyle(statusBarColor: Colors.transparent));
-  
-} 
+}
 
 class MyApp extends StatelessWidget {
   MyApp({super.key});
@@ -21,7 +19,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      title: AppString.name,
+      title: AppConfig.name,
       debugShowCheckedModeBanner: false,
       theme: ThemeData.light(),
       darkTheme: ThemeData.dark(),

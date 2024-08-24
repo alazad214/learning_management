@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:learning_management/app/modules/user%20auth/widget/auth_taitle_subtitle.dart';
 import 'package:learning_management/utils/colors.dart';
 import 'package:learning_management/widgtets/button1.dart';
-import 'package:learning_management/widgtets/text1.dart';
-import 'package:learning_management/widgtets/text2.dart';
 import 'package:learning_management/widgtets/textfield1.dart';
 import '../../login/views/login_screen.dart';
 import '../../widget/auth_fotter_text.dart';
@@ -21,18 +20,10 @@ class RegisterScreen extends StatelessWidget {
         child: Column(
           children: [
             SizedBox(height: screenSize.height / 10),
-            const Text1(
-              text: "Register",
-              fontweight: FontWeight.bold,
-              size: 20.0,
-              padding: EdgeInsets.only(bottom: 10),
+            AuthTaitleSubtitle(
+              title: ' Join Our Comminuty',
             ),
-            const Text2(
-              text: "Hello user you have a gratefull journey!",
-            ),
-            const SizedBox(
-              height: 20.0,
-            ),
+            
             const Textfield1(
               hinttext: Text("Name"),
               suffixicon: Icons.person,

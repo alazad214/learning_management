@@ -28,15 +28,18 @@ class BottomNavScreen extends StatelessWidget {
                 icon: Icon(
                   Icons.home_outlined,
                 ),
+                activeIcon: Icon(Icons.home),
                 label: 'Home',
               ),
               BottomNavigationBarItem(
                 icon: Icon(Icons.video_call_outlined),
-                label: 'Course',
+                activeIcon: Icon(Icons.video_call),
+                label: 'Join Class',
               ),
               BottomNavigationBarItem(
-                icon: Icon(Icons.assignment),
-                label: 'Assignments',
+                icon: Icon(Icons.videocam_outlined),
+                activeIcon: Icon(Icons.videocam),
+                label: 'Recording',
               ),
               BottomNavigationBarItem(
                 icon: Icon(Icons.menu),

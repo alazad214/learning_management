@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../../../../widgtets/custom_see_all.dart';
 import '../../../../utils/colors.dart';
-import '../../../section/course section/views/course_utils.dart';
+import '../../../section/join class/widgets/course_utils.dart';
 import 'buy_course_details.dart';
 
 class BuyCourseCard extends StatelessWidget {

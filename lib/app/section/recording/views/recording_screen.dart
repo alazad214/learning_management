@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class AddToScreen extends StatelessWidget {
-  const AddToScreen({super.key});
+class RecordingScreen extends StatelessWidget {
+  const RecordingScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
       body: Center(
-        child: Text("addto"),
+        child: Text("RecordingScreen video"),
       ),
     );
   }

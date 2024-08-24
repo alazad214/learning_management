@@ -16,9 +16,9 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
         height: preferredSize.height,
         padding: EdgeInsets.only(top: MediaQuery.of(context).padding.top),
         decoration: BoxDecoration(
-          color: AppColor.secondary,
+          color: AppColor.primary,
           boxShadow: [
-            BoxShadow(color: AppColor.black3, blurRadius: 4, spreadRadius: 1),
+            BoxShadow(color: AppColor.black3, blurRadius: 2, spreadRadius: 0.1),
           ],
         ),
         child: Row(
@@ -55,22 +55,19 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
               ],
             ),
             const Spacer(),
-            Padding(
-                padding: const EdgeInsets.only(right: 15.0),
-                child: InkWell(
-                  onTap: () {
-                    Get.to(() => const NotificationPage());
-                  },
-                  child: const Icon(
-                    Icons.notifications,
-                    size: 28,
-                    color: AppColor.white,
-                  ),
+            IconButton(
+                onPressed: () {
+                  Get.to(() => const NotificationPage());
+                },
+                icon: Icon(
+                  Icons.notifications,
+                  size: 28,
+                  color: AppColor.white,
                 ))
           ],
         ));
   }
 
   @override
-  Size get preferredSize => const Size.fromHeight(130);
+  Size get preferredSize => const Size.fromHeight(110);
 }

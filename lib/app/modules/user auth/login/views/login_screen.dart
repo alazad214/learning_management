@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:learning_management/app/modules/user%20auth/widget/auth_taitle_subtitle.dart';
 import 'package:learning_management/utils/colors.dart';
 import 'package:learning_management/widgtets/button1.dart';
 import 'package:learning_management/widgtets/iconBox1.dart';
-import 'package:learning_management/widgtets/text1.dart';
 import 'package:learning_management/widgtets/text2.dart';
 import 'package:learning_management/widgtets/textfield1.dart';
 import '../../../../section/navigation bar/views/bottom_nav_screen.dart';
@@ -24,20 +24,7 @@ class LoginScreen extends StatelessWidget {
         child: Column(
           children: [
             SizedBox(height: screenSize.height / 8),
-            //LOGIN PAGE TITLE AND SUBTITLE
-            const Text1(
-              text: "Login",
-              fontweight: FontWeight.bold,
-              size: 20.0,
-              padding: EdgeInsets.only(bottom: 10),
-            ),
-            const Text2(
-              text: "Glad to meet you again!",
-            ),
-            const SizedBox(
-              height: 20.0,
-            ),
-
+            AuthTaitleSubtitle(),
             //TEXTFIELD
             const Textfield1(
               hinttext: Text("Email"),

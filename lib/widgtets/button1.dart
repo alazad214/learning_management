@@ -16,7 +16,7 @@ class Button1 extends StatelessWidget {
         width: w / 2,
         alignment: Alignment.center,
         decoration: BoxDecoration(
-          color: AppColor.red,
+          color: AppColor.primary,
           borderRadius: BorderRadius.circular(8.0),
         ),
         child: Text(

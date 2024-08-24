@@ -119,7 +119,7 @@ flutter:
   fonts:
     - family: Roboto
       fonts:
-        - asset: assets/fonts/robotoslab.ttf
+        - asset: assets/fonts/robato.ttf
 
   #         style: italic
   #   - family: Trajan Pro

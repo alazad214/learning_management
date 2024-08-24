@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../../section/course section/views/course_utils.dart';
-import '../../../section/course section/widgets/course_card.dart';
+import '../../../section/join class/widgets/course_utils.dart';
+import '../../../section/join class/widgets/course_card.dart';
 import '../../live course/views/live_course_details.dart';
 
 

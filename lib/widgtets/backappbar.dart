@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:learning_management/utils/colors.dart';
 
 class Backappbar extends StatelessWidget implements PreferredSizeWidget {
   const Backappbar({super.key, this.title});
@@ -7,8 +9,21 @@ class Backappbar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      title:  Text(title, style: const TextStyle(fontSize: 16.0),),
-      centerTitle: true,
+      automaticallyImplyLeading: false,
+      leading: IconButton(
+          onPressed: () {
+            Get.back();
+          },
+          icon: Icon(
+            Icons.arrow_back,
+            color: AppColor.white,
+          )),
+      backgroundColor: AppColor.primary,
+      titleSpacing: 0,
+      title: Text(
+        title,
+        style: const TextStyle(fontSize: 16.0, color: AppColor.white),
+      ),
     );
   }
 

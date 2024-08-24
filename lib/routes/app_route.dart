@@ -1,10 +1,10 @@
 import 'package:get/get_navigation/src/routes/get_route.dart';
 import 'package:learning_management/app/modules/onboading/views/onboading_screen.dart';
 import 'package:learning_management/app/modules/splash/views/splash_screen.dart';
+import 'package:learning_management/app/section/join%20class/views/join_class_screen.dart';
 import '../app/modules/notification/views/notification_page.dart';
 import '../app/modules/splash/bindigns/splash_bindings.dart';
 import '../app/modules/user auth/login/views/login_screen.dart';
-import '../app/section/course section/views/course_screen.dart';
 import '../app/section/home section/views/home_screen.dart';
 
 
@@ -36,7 +36,7 @@ List<GetPage> getPages = [
   ),
   GetPage(
     name: course,
-    page: () => const CourseScreen(),
+    page: () => const ClassJoin(),
   ),
   GetPage(
     name: notification,
