@@ -21,7 +21,7 @@ class FreeCourseScreen extends StatelessWidget {
         ),
         padding: const EdgeInsets.symmetric(horizontal: 10.0),
         decoration: BoxDecoration(
-            color: AppColor.red,
+            color: AppColor.primary,
             border: Border.all(width: 0.1),
             borderRadius: BorderRadius.circular(8.0)),
         child: Row(
@@ -41,7 +41,7 @@ class FreeCourseScreen extends StatelessWidget {
                     padding: const EdgeInsets.symmetric(
                         horizontal: 10.0, vertical: 5.0),
                     decoration: BoxDecoration(
-                        color: AppColor.primary,
+                        color: Colors.cyan,
                         borderRadius: BorderRadius.circular(10.0)),
                     child: const Row(
                       children: [

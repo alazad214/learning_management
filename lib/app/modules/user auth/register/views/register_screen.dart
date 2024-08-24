@@ -23,7 +23,6 @@ class RegisterScreen extends StatelessWidget {
             AuthTaitleSubtitle(
               title: ' Join Our Comminuty',
             ),
-            
             const Textfield1(
               hinttext: Text("Name"),
               suffixicon: Icons.person,
