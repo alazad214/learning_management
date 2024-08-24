@@ -8,7 +8,18 @@ class SettingsCard extends StatelessWidget {
   final text;
   final text2;
   final ontap;
-  const SettingsCard({super.key, this.icon, this.text, this.text2, this.ontap});
+  final bgcolor;
+  final size1;
+  final border;
+  const SettingsCard(
+      {super.key,
+      this.icon,
+      this.text,
+      this.text2,
+      this.ontap,
+      this.bgcolor,
+      this.size1,
+      this.border});
 
   @override
   Widget build(BuildContext context) {
@@ -17,17 +28,17 @@ class SettingsCard extends StatelessWidget {
       child: Container(
         height: 80,
         padding: const EdgeInsets.only(right: 10, left: 10),
-        margin: const EdgeInsets.only(bottom: 15),
+        margin: EdgeInsets.only(bottom: 15),
         decoration: BoxDecoration(
-            color: Colors.white.withOpacity(0.9),
+            color: bgcolor ?? Colors.white.withOpacity(0.9),
             borderRadius: BorderRadius.circular(6.0),
-            border: Border.all(width: 0.1)),
+            border: border ?? Border.all(width: 0.1)),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Image.asset(
               icon ?? 'assets/icon/skill.png',
-              height: 40,
+              height: 45.0,
             ),
             const SizedBox(width: 10.0),
             Flexible(
@@ -38,9 +49,10 @@ class SettingsCard extends StatelessWidget {
                 children: [
                   Text1(
                     text: text ?? 'Profile',
+                    size: size1 ?? 18.0,
                   ),
                   Text2(
-                    text: text2 ?? 'View your information',
+                    text: text2 ?? ' ',
                     alignment: Alignment.centerLeft,
                   )
                 ],

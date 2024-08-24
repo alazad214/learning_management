@@ -5,11 +5,7 @@ import 'package:learning_management/app/modules/live%20course/widgets/live_detai
 import 'package:learning_management/app/modules/live%20course/widgets/review_card.dart';
 import 'package:learning_management/app/modules/live%20course/widgets/study_plan_card.dart';
 import 'package:learning_management/utils/app_icon.dart';
-import 'package:learning_management/utils/colors.dart';
 import 'package:learning_management/widgtets/row_icon_text.dart';
-import 'package:learning_management/widgtets/small_container.dart';
-import 'package:learning_management/widgtets/text1.dart';
-import 'package:learning_management/widgtets/text2.dart';
 import '../../../../../widgtets/backappbar.dart';
 import '../widgets/live_class_card.dart';
 
@@ -24,7 +20,8 @@ class LiveCourseDetails extends StatelessWidget {
           title: data['title'],
         ),
         body: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 15.0, vertical: 15.0),
+          padding: const EdgeInsets.only(
+              left: 15.0, top: 15.0, right: 15.0, bottom: 150.0),
           child: ListView(
             children: [
               //LIVE DETAILS MAIN-->

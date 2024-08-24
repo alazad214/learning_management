@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:learning_management/app/section/menu%20section/widget/settings_card.dart';
 import 'package:learning_management/utils/app_image.dart';
+import 'package:learning_management/utils/colors.dart';
 import '../../../../../utils/app_icon.dart';
 import '../../../../../widgtets/backappbar.dart';
 import '../../../../../widgtets/small_container.dart';
@@ -9,7 +11,6 @@ import '../../../../../widgtets/text2.dart';
 import '../../course module/views/module_screen.dart';
 import '../../resourse/views/resourse_screen.dart';
 import '../certificate/views/certificate_screen.dart';
-
 
 class BuyCourseDetails extends StatelessWidget {
   const BuyCourseDetails({super.key});
@@ -44,7 +45,7 @@ class BuyCourseDetails extends StatelessWidget {
                       ),
                       const SizedBox(height: 10.0),
                       const SmallContainer(
-                        text: "Module-16",
+                        text: "Batch -35",
                       )
                     ],
                   ),
@@ -53,13 +54,34 @@ class BuyCourseDetails extends StatelessWidget {
             ),
             const SizedBox(height: 10.0),
             Text(
-              "faudfkjasldkjflk;asjdf;lkjasd;lkfj;laksdjf;lka;lsidjfoiaejfgjasdklfjasidjflkajsdkjfasdjf",
+              "Since your Progress is not as excepted despite your affort",
+              style: TextStyle(fontSize: 18.0),
+            ),
+            SizedBox(
+              height: 15.0,
+            ),
+            Text(
+              "Next Batch- Wed, Aug 21, 2024",
+              style: TextStyle(fontSize: 18.0, color: Colors.green),
+            ),
+            const Divider(
+              height: 15,
+              color: Colors.blue,
+            ),
+            const SizedBox(height: 10.0),
+            SettingsCard(
+              text: 'All Module Pre-Recored Video',
+              text2: '410 videos',
+              size1: 14.0,
+              icon: AppIcon.pre_recorded,
+              bgcolor: AppColor.black.withOpacity(0.1),
             ),
             const Divider(height: 15),
             const SizedBox(height: 10.0),
             Wrap(
               spacing: 10,
               runSpacing: 10,
+              alignment: WrapAlignment.center,
               children: [
                 _customtag('Modules', AppIcon.module, () {
                   Get.to(() => const ModuleScreen());
@@ -67,7 +89,6 @@ class BuyCourseDetails extends StatelessWidget {
                 _customtag('Assignment', AppIcon.assignment, () {
                   Get.to(() => const ResourseScreen());
                 }),
-                _customtag('Recorded', AppIcon.record, () {}),
                 _customtag('Recourse', AppIcon.resourse, () {
                   Get.to(() => const ResourseScreen());
                 }),
@@ -75,34 +96,29 @@ class BuyCourseDetails extends StatelessWidget {
                   Get.to(() => const CertificateScreen());
                 }),
               ],
-            )
+            ),
+            SizedBox(
+              height: 15.0,
+            ),
+            SettingsCard(
+              text: 'Notice Board',
+              icon: AppIcon.notice,
+              bgcolor:
+                  const Color.fromARGB(255, 234, 234, 238).withOpacity(0.1),
+              border: Border.all(width: 0.1),
+            ),
           ],
-        ),
-      ),
-      bottomSheet: Container(
-        height: 100,
-        decoration: BoxDecoration(
-            color: Colors.white,
-            borderRadius: const BorderRadius.only(
-                topLeft: Radius.circular(15.0),
-                topRight: Radius.circular(15.0))),
-        child: const Center(
-          child: Text(
-            'This is a bottom sheet',
-            style: TextStyle(color: Colors.white, fontSize: 18),
-          ),
         ),
       ),
     );
   }
 
-
   _customtag(text, image, ontap) {
     return InkWell(
       onTap: ontap,
       child: Container(
-        height: 80,
-        width: 100,
+        height: 120,
+        width: 140,
         decoration: BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.circular(8.0),
