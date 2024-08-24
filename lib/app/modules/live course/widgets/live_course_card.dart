@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:learning_management/app/modules/live%20course/views/live_course_details.dart';
 import '../../../section/course section/views/course_utils.dart';
 import '../../../section/course section/widgets/course_card.dart';
-import 'live_course_details.dart';
+
 
 class LiveCourseCard extends StatelessWidget {
   const LiveCourseCard({

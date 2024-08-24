@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:learning_management/app/modules/live%20course/widgets/live_course_card.dart';
 import '../../../../widgtets/backappbar.dart';
 import '../../../../widgtets/custom_appbar.dart';
 import '../../../../widgtets/custom_see_all.dart';
 import '../../../modules/free course/views/free_course_screen.dart';
-import '../../../modules/live course/views/live_course_card.dart';
 import '../../../modules/my course/views/buy_course_card.dart';
 import '../../../modules/recoded courses/views/record_course_card.dart';
 import '../../../modules/teacher/views/teacher_card.dart';

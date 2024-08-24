@@ -14,4 +14,5 @@ class AppIcon {
   static String liveClass = "assets/icon/liveClass.png";
   static String call = "assets/icon/call.png";
   static String email = "assets/icon/email.png";
+  static String support = "assets/icon/team.png";
 }

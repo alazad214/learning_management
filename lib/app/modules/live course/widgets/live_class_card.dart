@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:learning_management/utils/colors.dart';
 import '../../../../../widgtets/text1.dart';
 import '../../../../../widgtets/text2.dart';
 
@@ -24,11 +25,10 @@ class LiveClassCard extends StatelessWidget {
             icon ?? 'assets/icon/skill.png',
             height: 50.0,
           ),
+          SizedBox(height: 5.0),
           Text1(
             text: text ?? "",
-          ),
-          Text2(
-            text: text2 ?? "",
+            color: AppColor.primary,
           ),
         ],
       ),

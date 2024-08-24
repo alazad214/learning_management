@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:learning_management/app/modules/live%20course/widgets/live_course_card.dart';
 import 'package:learning_management/widgtets/backappbar.dart';
-import 'live_course_card.dart';
+
 
 class LiveCourseScreen extends StatelessWidget {
   final data;

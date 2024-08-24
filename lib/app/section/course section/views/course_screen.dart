@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:learning_management/app/modules/live%20course/widgets/live_course_card.dart';
 import 'package:learning_management/widgtets/custom_appbar.dart';
 import '../../../modules/free course/views/free_course_screen.dart';
-import '../../../modules/live course/views/live_course_card.dart';
 import '../../../modules/recoded courses/views/record_course_card.dart';
 
 
