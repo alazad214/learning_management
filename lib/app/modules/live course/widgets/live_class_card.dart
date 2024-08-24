@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:learning_management/utils/colors.dart';
 import '../../../../../widgtets/text1.dart';
-import '../../../../../widgtets/text2.dart';
+
 
 class LiveClassCard extends StatelessWidget {
   const LiveClassCard({super.key, this.icon, this.text, this.text2});
