@@ -55,6 +55,9 @@ dependencies:
   #use to playing a youtube video
   youtube_player_flutter: ^8.0.0
 
+  #Show a toast messages
+  fluttertoast: ^8.2.8
+
 
 
 dev_dependencies:

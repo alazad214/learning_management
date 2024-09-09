@@ -3,7 +3,8 @@ import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:learning_management/routes/app_route.dart';
 import 'package:learning_management/utils/app_config.dart';
-import 'app/section/menu section/controller/theme_controller.dart';
+
+import 'app/menu/controller/theme_controller.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
