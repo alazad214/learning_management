@@ -58,7 +58,7 @@ class ModuleScreen extends StatelessWidget {
                           for (int i = 0; i < 5; i++)
                             ListTile(
                                 onTap: () {
-                                  Get.to(()=>ModuleVideoScreen());
+                                  Get.to(() => ModuleVideoScreen());
                                 },
                                 contentPadding: EdgeInsets.zero,
                                 leading: CircleAvatar(
