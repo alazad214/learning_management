@@ -1,5 +1,3 @@
-
-
 import '../../profile/views/profile_screen.dart';
 import '../../settings/about_us_screen.dart';
 import '../../settings/privacy_policy_screen.dart';
@@ -17,7 +15,7 @@ List<dynamic> settingsUtils = [
     "icon": "assets/icon/team.png",
     'text': 'About Us',
     'text2': '',
-    'page':  AboutUsScreen()
+    'page': AboutUsScreen()
   },
   {
     "icon": "assets/icon/help.png",
@@ -29,7 +27,7 @@ List<dynamic> settingsUtils = [
     "icon": "assets/icon/insurance.png",
     'text': 'Privacy Policy',
     'text2': 'Contact for any problem or query',
-    'page': const PrivacyPolicyScreen()
+    'page': PrivacyPolicyScreen()
   },
   {
     "icon": "assets/icon/conditions.png",
