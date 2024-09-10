@@ -17,11 +17,15 @@ class HomeAppBar extends StatelessWidget {
               children: [
                 Text('Hi, Al Azad',
                     style: AppTextStyle1(textColor: Colors.white)),
-                Text("Let's start learning", style: AppTextStyle2(textColor: Colors.white70)),
+                Text("Let's start learning",
+                    style: AppTextStyle2(textColor: Colors.white70)),
               ],
             ),
-            CircleAvatar(
-                backgroundColor: Colors.white,
+            Container(
+                height: 50,
+                width: 50,
+                clipBehavior: Clip.antiAlias,
+                decoration: BoxDecoration(shape: BoxShape.circle),
                 child: Image.asset('assets/logo/tripti.jpg'))
           ],
         )
