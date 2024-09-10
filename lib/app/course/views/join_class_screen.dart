@@ -6,13 +6,13 @@ import '../../../widgets/small_container.dart';
 
 
 class ClassJoin extends StatelessWidget {
-  const ClassJoin({super.key, this.appbar});
-  final appbar;
+  const ClassJoin({super.key});
+
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: appbar ?? const CustomAppBar(),
+
         body: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,

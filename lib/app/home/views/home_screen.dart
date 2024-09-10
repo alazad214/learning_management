@@ -17,61 +17,70 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final size = MediaQuery.sizeOf(context);
+    final size = MediaQuery.of(context)
+        .size; // Use of MediaQuery.of instead of MediaQuery.sizeOf
+
     return Scaffold(
-        body: SingleChildScrollView(
-            child: Stack(
-      children: [
-        Container(
-          width: size.width,
-          height: size.height / 4.5,
-          decoration: BoxDecoration(
-            color: AppColor.primary,
-          ),
-        ),
-        Padding(
-          padding: EdgeInsets.symmetric(horizontal: 20, vertical: 35),
-          child: Column(
-            children: [
-              HomeAppBar(),
-              Column(
+      body: SingleChildScrollView(
+        child: Stack(
+          children: [
+            Container(
+              width: size.width,
+              height: size.height / 4.5,
+              decoration: BoxDecoration(
+                color: AppColor.primary,
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 20, vertical: 35),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const SizedBox(height: 20.0),
-                  const Slider1(),
+                  ///Custom Home AppBar...
+                  HomeAppBar(),
+                  SizedBox(height: 20.0),
+
+                  ///Custom Slider...
+                  Slider1(),
+
+                  ///Free Course...
                   FreeCourseScreen(),
-                  const BuyCourseCard(),
-                  const Divider(),
-                  const SizedBox(height: 10),
+                  Divider(color: Colors.blueAccent),
+                  SizedBox(height: 10.0),
+
+                  ///Custom My Course...
+                  BuyCourseCard(),
+                  Divider(color: Colors.blueAccent),
+                  SizedBox(height: 10),
+
+                  ///Custom Live Course...
                   CustomSeeAll(
                     title: 'Live Courses',
                     color: Colors.redAccent,
-                    ontap: () => Get.to(() => const ClassJoin(
-                          appbar: Backappbar(
-                            title: "Our Courses",
-                          ),
-                        )),
+                    ontap: () => Get.to(() => ClassJoin()),
                   ),
-                  const SizedBox(height: 10.0),
-                  const LiveCourseCard(),
-                  const SizedBox(height: 10),
+                  SizedBox(height: 10),
+                  LiveCourseCard(),
+                  SizedBox(height: 50),
+
+                  ///Custom Recorded Course...
                   CustomSeeAll(
-                    title: 'Recoded Courses',
+                    title: 'Recorded Courses',
                     color: Colors.green,
-                    ontap: () => Get.to(() => const ClassJoin(
-                          appbar: Backappbar(
-                            title: "Our Courses",
-                          ),
-                        )),
+                    ontap: () => Get.to(() => ClassJoin()),
                   ),
-                  const SizedBox(height: 10.0),
-                  const RecordCourseCard(),
-                  const TeacherCard()
+                  SizedBox(height: 10),
+                  RecordCourseCard(),
+
+                  ///Teacher List
+                  SizedBox(height: 30),
+                  TeacherCard(),
                 ],
               ),
-            ],
-          ),
-        )
-      ],
-    )));
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }

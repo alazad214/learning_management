@@ -18,7 +18,9 @@ class Text2 extends StatelessWidget {
       this.fontweight,
       this.padding,
       this.alignment,
-      this.ontap, this.maxline, this.textaign});
+      this.ontap,
+      this.maxline,
+      this.textaign});
 
   @override
   Widget build(BuildContext context) {
@@ -29,9 +31,9 @@ class Text2 extends StatelessWidget {
         child: Align(
           alignment: alignment ?? Alignment.center,
           child: Text(
-            text!,
-            textAlign:textaign?? TextAlign.left,
-            maxLines: maxline??1,
+            text ?? ' ',
+            textAlign: textaign ?? TextAlign.left,
+            maxLines: maxline ?? 1,
             overflow: TextOverflow.ellipsis,
             style: TextStyle(
                 color: color ?? Colors.black,
