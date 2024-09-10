@@ -13,8 +13,8 @@ import '../../menu/widget/settings_card.dart';
 import '../../resourse/views/resourse_screen.dart';
 import '../certificate/views/certificate_screen.dart';
 
-class BuyCourseDetails extends StatelessWidget {
-  const BuyCourseDetails({super.key});
+class MyCourseDetails extends StatelessWidget {
+  const MyCourseDetails({super.key});
 
   @override
   Widget build(BuildContext context) {

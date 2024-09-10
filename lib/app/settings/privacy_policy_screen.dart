@@ -58,9 +58,9 @@ class PrivacyPolicyScreen extends StatelessWidget {
             SizedBox(height: 8.0),
             Text(
               'We collect the following types of information:\n\n'
-                  '- Personal Information: Name, email address, etc.\n'
-                  '- Usage Data: Information about how you use our app.\n'
-                  '- Device Information: Information about your device, including IP address and browser type.',
+              '- Personal Information: Name, email address, etc.\n'
+              '- Usage Data: Information about how you use our app.\n'
+              '- Device Information: Information about your device, including IP address and browser type.',
               style: TextStyle(
                 fontSize: 16.0,
                 color: Colors.black54,
@@ -78,9 +78,9 @@ class PrivacyPolicyScreen extends StatelessWidget {
             SizedBox(height: 8.0),
             Text(
               'We use your information to:\n\n'
-                  '- Provide and maintain our services.\n'
-                  '- Improve user experience.\n'
-                  '- Communicate with you, including sending updates and promotional materials.',
+              '- Provide and maintain our services.\n'
+              '- Improve user experience.\n'
+              '- Communicate with you, including sending updates and promotional materials.',
               style: TextStyle(
                 fontSize: 16.0,
                 color: Colors.black54,
@@ -132,8 +132,8 @@ class PrivacyPolicyScreen extends StatelessWidget {
             SizedBox(height: 8.0),
             Text(
               'If you have any questions about this Privacy Policy, please contact us at:\n\n'
-                  'Email: your.email@example.com\n'
-                  'Website: www.yourwebsite.com',
+              'Email: your.email@example.com\n'
+              'Website: www.yourwebsite.com',
               style: TextStyle(
                 fontSize: 16.0,
                 color: Colors.black54,

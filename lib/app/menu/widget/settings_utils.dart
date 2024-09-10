@@ -2,7 +2,7 @@ import '../../profile/views/profile_screen.dart';
 import '../../settings/about_us_screen.dart';
 import '../../settings/privacy_policy_screen.dart';
 import '../../settings/terms_and_conditions.dart';
-import '../../support/views/support_screen.dart';
+import '../../settings/support_screen.dart';
 
 List<dynamic> settingsUtils = [
   {

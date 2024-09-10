@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:learning_management/utils/app_icon.dart';
-import '../../../widgets/backappbar.dart';
-import '../../menu/widget/settings_card.dart';
+import '../../widgets/backappbar.dart';
+import '../menu/widget/settings_card.dart';
 
 class SupportScreen extends StatelessWidget {
   const SupportScreen({super.key});

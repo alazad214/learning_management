@@ -1,6 +1,6 @@
 List<dynamic> courseUtils = [
   {
-    "title": "Flutter Developer",
+    "title": "Flutter App Development",
     "description":
         "যারা মডার্ন কোন ফ্রেমওয়ার্ক একদম শুরু থেকে হাতে-কলমে, লাইভে শিখে বিশ্বের দেশি বিদেশি কোম্পানিতে কাজ করতে চান, তাদের জন্য বেস্ট অপশন হতে পারে ASP.NET Core ফ্রেমওয়ার্ক। তবে এই কোর্সে জয়েন করার জন্য আপনার অবশ্যই ব্যাসিক প্রোগ্রামিং সম্পর্কে নলেজ থাকা লাগবে।",
     "image": "assets/images/course/ostad_flutter.jpg",
@@ -20,7 +20,7 @@ List<dynamic> courseUtils = [
     "course": "15",
   },
   {
-    "title": "Flutter Developer",
+    "title": "Mern Stack With Asik",
     "description":
         "Web DevelopmentWeb DevelopmentWeb DevelopmentWeb DevelopmentWeb DevelopmentWeb DevelopmentWeb Development",
     "image": "assets/images/course/ostad.jpg",

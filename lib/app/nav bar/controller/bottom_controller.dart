@@ -9,7 +9,6 @@ class BottomNavController extends GetxController {
 
   final pages = [HomeScreen(), ClassJoin(), RecordingScreen(), MenuScreen()];
 
-  // Method to change the selected index
   void changeIndex(int index) {
     selectedIndex.value = index;
   }
