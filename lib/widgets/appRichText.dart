@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import '../../../../../utils/colors.dart';
-import '../../../../widgets/text2.dart';
+import '../../../utils/colors.dart';
+import '../../widgets/text2.dart';
 
 class Apprichtext extends StatelessWidget {
   final text;

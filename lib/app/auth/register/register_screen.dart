@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:learning_management/app/auth/widget/appRichText.dart';
+import 'package:learning_management/widgets/appRichText.dart';
 import 'package:learning_management/controllers/login_controller.dart';
 import 'package:learning_management/style/text_style.dart';
 import 'package:learning_management/style/textfiled_style.dart';

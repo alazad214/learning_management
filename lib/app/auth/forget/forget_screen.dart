@@ -8,7 +8,7 @@ import '../../../utils/app_image.dart';
 import '../../../utils/input_validation.dart';
 import '../../../widgets/app_button.dart';
 import '../register/register_screen.dart';
-import '../widget/appRichText.dart';
+import '../../../widgets/appRichText.dart';
 
 class ForgetScreen extends StatelessWidget {
   const ForgetScreen({super.key});

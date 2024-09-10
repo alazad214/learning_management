@@ -11,7 +11,7 @@ import '../../../utils/app_image.dart';
 import '../../../utils/input_validation.dart';
 import '../../../widgets/app_button.dart';
 import '../../nav bar/views/bottom_nav_screen.dart';
-import '../widget/appRichText.dart';
+import '../../../widgets/appRichText.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
