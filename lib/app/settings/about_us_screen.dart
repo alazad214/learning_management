@@ -1,38 +1,198 @@
 import 'package:flutter/material.dart';
-
-import '../../widgets/backappbar.dart';
-import '../../widgets/row_icon_text.dart';
-import '../../widgets/text1.dart';
-
+import 'package:url_launcher/url_launcher.dart';
 
 class AboutUsScreen extends StatelessWidget {
-  const AboutUsScreen({super.key});
+  // Function to launch URL
+  Future<void> _launchURL(String url) async {
+    if (await canLaunch(url)) {
+      await launch(url);
+    } else {
+      throw 'Could not launch $url';
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: Backappbar(title: 'About us'),
-      body: SingleChildScrollView(
-        child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 15.0, vertical: 20.0),
+      appBar: AppBar(
+        title: Text('About Us'),
+      ),
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              Center(
+                child: Image.asset(
+                  'assets/logo/logo.png', // Replace with your logo asset
+                  height: 100.0,
+                ),
+              ),
+              SizedBox(height: 16.0),
+              SizedBox(height: 16.0),
               Text(
-                'Ostad is a Screen Development platform govern your use of the App and any associated services. By accessing or using the App, you agree to be bound by these Terms.\n\n'
-                'By using the App, you agree to comply with and be bound by these Terms and any additional terms, conditions, or policies that may be applicable. If you do not agree with any part of these Terms, you must not use the App.\n\n'
-                'To the fullest extent permitted by law, [Your Company Name] shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising out of or related to your use of the App.',
+                'ShikhonIQ is a comprehensive Learning Management System designed to enhance the learning experience. It offers features such as profile management, notifications, and a vast library of recorded videos to help you manage and access educational content efficiently.',
+                style: TextStyle(
+                  fontSize: 16.0,
+                  color: Colors.black54,
+                ),
               ),
-              SizedBox(height: 30),
-              Text1(
-                text: 'Trade licence number 53212154***',
-                fontweight: FontWeight.bold,
+              SizedBox(height: 24.0),
+              Text(
+                'Mission Statement:',
+                style: TextStyle(
+                  fontSize: 18.0,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.black87,
+                ),
               ),
-              SizedBox(height: 30),
-              RowIconText(text: '+880 17655***', icon: Icons.phone),
-              SizedBox(height: 15),
-              RowIconText(text: 'alazadcmt@gmail.com', icon: Icons.mail),
-              SizedBox(height: 15),
+              SizedBox(height: 8.0),
+              Text(
+                'To provide a seamless and engaging learning experience through innovative technology and user-friendly design.',
+                style: TextStyle(
+                  fontSize: 16.0,
+                  color: Colors.black54,
+                ),
+              ),
+              SizedBox(height: 16.0),
+              Text(
+                'Developed by:',
+                style: TextStyle(
+                  fontSize: 18.0,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.black87,
+                ),
+              ),
+              SizedBox(height: 8.0),
+              Text(
+                'Al Azad',
+                style: TextStyle(
+                  fontSize: 16.0,
+                  color: Colors.black54,
+                ),
+              ),
+              SizedBox(height: 16.0),
+              Text(
+                'Contact Information:',
+                style: TextStyle(
+                  fontSize: 18.0,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.black87,
+                ),
+              ),
+              SizedBox(height: 8.0),
+              GestureDetector(
+                onTap: () => _launchURL('mailto:alazad214@gmail.com'),
+                child: Text(
+                  'Email: alazad214@gmail.com',
+                  style: TextStyle(
+                    fontSize: 16.0,
+                    color: Colors.blue,
+                    decoration: TextDecoration.underline,
+                  ),
+                ),
+              ),
+              GestureDetector(
+                onTap: () => _launchURL('https://alazad214.netlify.app/'),
+                child: Text(
+                  'Website: https://alazad214.netlify.app/',
+                  style: TextStyle(
+                    fontSize: 16.0,
+                    color: Colors.blue,
+                    decoration: TextDecoration.underline,
+                  ),
+                ),
+              ),
+              SizedBox(height: 16.0),
+              Text(
+                'Follow us on social media:',
+                style: TextStyle(
+                  fontSize: 18.0,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.black87,
+                ),
+              ),
+              SizedBox(height: 8.0),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  IconButton(
+                    icon: Icon(Icons.facebook),
+                    onPressed: () =>
+                        _launchURL('https://www.facebook.com/yourpage'),
+                  ),
+                  IconButton(
+                    icon: Icon(Icons.facebook),
+                    onPressed: () =>
+                        _launchURL('https://twitter.com/yourprofile'),
+                  ),
+                  IconButton(
+                    icon: Icon(Icons.facebook),
+                    onPressed: () =>
+                        _launchURL('https://www.linkedin.com/in/yourprofile'),
+                  ),
+                ],
+              ),
+              SizedBox(height: 24.0),
+              Text(
+                'Acknowledgements:',
+                style: TextStyle(
+                  fontSize: 18.0,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.black87,
+                ),
+              ),
+              SizedBox(height: 8.0),
+              Text(
+                'Special thanks to the open-source community and all contributors who made this app possible.',
+                style: TextStyle(
+                  fontSize: 16.0,
+                  color: Colors.black54,
+                ),
+              ),
+              SizedBox(height: 24.0),
+              Text(
+                'Legal Information:',
+                style: TextStyle(
+                  fontSize: 18.0,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.black87,
+                ),
+              ),
+              SizedBox(height: 8.0),
+              GestureDetector(
+                onTap: () => _launchURL('https://www.yourwebsite.com/terms'),
+                child: Text(
+                  'Terms of Service',
+                  style: TextStyle(
+                    fontSize: 16.0,
+                    color: Colors.blue,
+                    decoration: TextDecoration.underline,
+                  ),
+                ),
+              ),
+              SizedBox(height: 8.0),
+              GestureDetector(
+                onTap: () => _launchURL('https://www.yourwebsite.com/privacy'),
+                child: Text(
+                  'Privacy Policy',
+                  style: TextStyle(
+                    fontSize: 16.0,
+                    color: Colors.blue,
+                    decoration: TextDecoration.underline,
+                  ),
+                ),
+              ),
+              Center(
+                child: Text(
+                  'Version 1.0.0',
+                  style: TextStyle(
+                    fontSize: 14.0,
+                    color: Colors.black45,
+                  ),
+                ),
+              ),
             ],
           ),
         ),

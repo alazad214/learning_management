@@ -17,7 +17,7 @@ List<dynamic> settingsUtils = [
     "icon": "assets/icon/team.png",
     'text': 'About Us',
     'text2': '',
-    'page': const AboutUsScreen()
+    'page':  AboutUsScreen()
   },
   {
     "icon": "assets/icon/help.png",
