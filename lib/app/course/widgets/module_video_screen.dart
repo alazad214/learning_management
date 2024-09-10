@@ -7,7 +7,6 @@ import 'package:learning_management/widgets/app_button.dart';
 
 import 'lesson_info_widget.dart';
 
-// Rename the controller to avoid conflict
 class ModuleVideoController extends GetxController {
   late VideoPlayerController videoPlayerController;
   ChewieController? chewieController;
@@ -19,7 +18,7 @@ class ModuleVideoController extends GetxController {
     _initializePlayer();
   }
 
-  Future<void> _initializePlayer() async {
+  _initializePlayer() async {
     videoPlayerController = VideoPlayerController.network(
       'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
     );
