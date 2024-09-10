@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:learning_management/utils/colors.dart';
-import 'package:learning_management/widgtets/small_container.dart';
-import 'package:learning_management/widgtets/text1.dart';
+
+import '../../../widgets/small_container.dart';
+import '../../../widgets/text1.dart';
+
 
 class BottonSheet extends StatelessWidget {
   const BottonSheet({super.key});

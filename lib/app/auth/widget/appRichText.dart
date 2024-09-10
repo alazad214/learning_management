@@ -1,29 +1,29 @@
 import 'package:flutter/material.dart';
 import '../../../../../utils/colors.dart';
-import '../../../../../widgtets/text2.dart';
+import '../../../../widgets/text2.dart';
 
-class AuthFotterText extends StatelessWidget {
+class Apprichtext extends StatelessWidget {
   final text;
-  final pagename;
+  final text2;
   final ontap;
   final padding;
-  const AuthFotterText(
-      {super.key, this.text, this.pagename, this.ontap, this.padding});
+  const Apprichtext(
+      {super.key, this.text, this.text2, this.ontap, this.padding});
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: padding ?? EdgeInsets.only(top: 60),
-      child: Wrap(
-        crossAxisAlignment: WrapCrossAlignment.center,
+      padding: padding ?? EdgeInsets.only(top: 20),
+      child: Row(
+      mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text2(
-            text: text ?? "Don't have an accoutn?  ",
+            text: text ?? "Don't have an account?  ",
           ),
           InkWell(
             onTap: ontap,
             child: Text2(
-              text: pagename ?? "Register",
+              text: text2 ?? "Register",
               fontweight: FontWeight.bold,
               color: AppColor.primary,
             ),

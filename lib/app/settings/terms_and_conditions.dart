@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:learning_management/utils/colors.dart';
-import 'package:learning_management/widgtets/backappbar.dart';
-import 'package:learning_management/widgtets/text2.dart';
+
+import '../../widgets/backappbar.dart';
+import '../../widgets/text2.dart';
+
 
 class TermsAndConditions extends StatelessWidget {
   const TermsAndConditions({super.key});

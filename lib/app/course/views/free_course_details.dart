@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:learning_management/widgtets/backappbar.dart';
-import 'package:learning_management/widgtets/text1.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
-import '../../../../../widgtets/text2.dart';
+
+import '../../../widgets/backappbar.dart';
+import '../../../widgets/text1.dart';
+import '../../../widgets/text2.dart';
 import '../controller/free_course_controler.dart';
 
 class FreeCourseDetails extends StatelessWidget {

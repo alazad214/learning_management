@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:learning_management/utils/colors.dart';
 
 InputDecoration appInputDecoretion(label, icon) {
   return InputDecoration(
@@ -9,12 +10,13 @@ InputDecoration appInputDecoretion(label, icon) {
     //enable-->
     enabledBorder: OutlineInputBorder(
       borderRadius: BorderRadius.circular(14.0),
-      borderSide: const BorderSide(color: Colors.blue, width: 1),
+      borderSide:
+          BorderSide(color: AppColor.primary.withOpacity(0.7), width: 1),
     ),
     //focus-->
     focusedBorder: OutlineInputBorder(
       borderSide: const BorderSide(
-        color: Colors.blue,
+        color: AppColor.primary,
         width: 2,
       ),
       borderRadius: BorderRadius.circular(14.0),
@@ -28,8 +30,8 @@ InputDecoration appInputDecoretion(label, icon) {
       borderRadius: BorderRadius.circular(14.0),
     ),
     focusedErrorBorder: OutlineInputBorder(
-      borderSide: const BorderSide(
-        color: Colors.blue,
+      borderSide:  BorderSide(
+        color: AppColor.primary,
         width: 2,
       ),
       borderRadius: BorderRadius.circular(14.0),

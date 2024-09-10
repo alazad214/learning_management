@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:learning_management/widgtets/text1.dart';
+import 'package:learning_management/widgets/text1.dart';
+
 
 class RowIconText extends StatelessWidget {
   final text;

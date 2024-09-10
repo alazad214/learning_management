@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../../../widgtets/backappbar.dart';
-import '../../../../widgtets/custom_appbar.dart';
-import '../../../../widgtets/custom_see_all.dart';
-
+import '../../../widgets/backappbar.dart';
+import '../../../widgets/custom_appbar.dart';
+import '../../../widgets/custom_see_all.dart';
 import '../../course/views/free_course_screen.dart';
 import '../../course/views/join_class_screen.dart';
 import '../../course/views/record_course_card.dart';

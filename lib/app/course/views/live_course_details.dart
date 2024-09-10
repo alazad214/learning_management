@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 
 import 'package:learning_management/utils/app_icon.dart';
-import 'package:learning_management/widgtets/row_icon_text.dart';
-import '../../../../../widgtets/backappbar.dart';
+
+import '../../../widgets/backappbar.dart';
+import '../../../widgets/row_icon_text.dart';
 import '../widgets/botton_sheet.dart';
 import '../widgets/instructor_card.dart';
 import '../widgets/live_class_card.dart';

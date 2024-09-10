@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:learning_management/widgtets/backappbar.dart';
 
+import '../../../widgets/backappbar.dart';
 import '../widgets/resourse_card.dart';
 
 

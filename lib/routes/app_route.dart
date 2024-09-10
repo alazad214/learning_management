@@ -1,14 +1,11 @@
 import 'package:get/get_navigation/src/routes/get_route.dart';
-
-import '../app/auth/user/login/views/login_screen.dart';
+import '../app/auth/LoginScreen/login_screen.dart';
 import '../app/course/views/join_class_screen.dart';
 import '../app/home/views/home_screen.dart';
 import '../app/onboading/onboading/onboading_screen.dart';
 import '../app/onboading/splash/bindigns/splash_bindings.dart';
 import '../app/onboading/splash/views/splash_screen.dart';
 import '../app/settings/notification_page.dart';
-
-
 
 //INITIAL UNIQUE ROUTE NAME
 const String splash = '/splash_screen';

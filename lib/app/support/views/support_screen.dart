@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:learning_management/utils/app_icon.dart';
-import 'package:learning_management/widgtets/backappbar.dart';
-
+import '../../../widgets/backappbar.dart';
 import '../../menu/widget/settings_card.dart';
 
 class SupportScreen extends StatelessWidget {

@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:learning_management/widgtets/custom_appbar.dart';
-import 'package:learning_management/widgtets/text2.dart';
+
+import '../../../widgets/custom_appbar.dart';
+import '../../../widgets/text2.dart';
 import '../widget/settings_card.dart';
 import '../widget/settings_utils.dart';
 import '../widget/theme_lagnuage.dart';

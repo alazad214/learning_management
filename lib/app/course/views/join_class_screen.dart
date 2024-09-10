@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:learning_management/utils/colors.dart';
-import 'package:learning_management/widgtets/custom_appbar.dart';
-import 'package:learning_management/widgtets/small_container.dart';
+
+import '../../../widgets/custom_appbar.dart';
+import '../../../widgets/small_container.dart';
+
 
 class ClassJoin extends StatelessWidget {
   const ClassJoin({super.key, this.appbar});

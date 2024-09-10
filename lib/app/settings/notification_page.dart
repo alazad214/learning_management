@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import '../../widgtets/backappbar.dart';
+
+import '../../widgets/backappbar.dart';
+
 
 class NotificationPage extends StatelessWidget {
   const NotificationPage({super.key});

@@ -3,10 +3,11 @@ import 'package:get/get.dart';
 import 'package:learning_management/utils/app_image.dart';
 import 'package:learning_management/utils/colors.dart';
 import '../../../../../utils/app_icon.dart';
-import '../../../../../widgtets/backappbar.dart';
-import '../../../../../widgtets/small_container.dart';
-import '../../../../../widgtets/text1.dart';
-import '../../../../../widgtets/text2.dart';
+
+import '../../../widgets/backappbar.dart';
+import '../../../widgets/small_container.dart';
+import '../../../widgets/text1.dart';
+import '../../../widgets/text2.dart';
 import '../../course/views/module_screen.dart';
 import '../../menu/widget/settings_card.dart';
 import '../../resourse/views/resourse_screen.dart';

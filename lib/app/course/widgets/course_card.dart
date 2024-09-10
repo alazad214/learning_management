@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:learning_management/widgtets/small_container.dart';
+
+import '../../../widgets/small_container.dart';
 
 class CourseCard extends StatelessWidget {
   const CourseCard(

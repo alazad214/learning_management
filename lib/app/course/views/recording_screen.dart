@@ -52,7 +52,7 @@ class RecordingScreen extends StatelessWidget {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          // Video Thumbnail with Animation
+
                           Stack(
                             children: [
                               ClipRRect(
@@ -139,5 +139,3 @@ class RecordingScreen extends StatelessWidget {
     );
   }
 }
-
-

@@ -1,8 +1,10 @@
+
+
+
 import 'package:flutter/material.dart';
-import 'package:learning_management/widgtets/small_container.dart';
 
-import '../../../../../widgtets/text1.dart';
-
+import '../../../widgets/small_container.dart';
+import '../../../widgets/text1.dart';
 
 class Resoursecard extends StatelessWidget {
   const Resoursecard({super.key, this.moduleNo, this.date, this.ontap});

@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:learning_management/widgtets/backappbar.dart';
-import 'package:learning_management/widgtets/button1.dart';
-import 'package:learning_management/widgtets/text1.dart';
-import 'package:learning_management/widgtets/text2.dart';
+
 import 'package:readmore/readmore.dart';
+
+import '../../../widgets/backappbar.dart';
+import '../../../widgets/button1.dart';
+import '../../../widgets/text1.dart';
+import '../../../widgets/text2.dart';
 
 class TeacherDetails extends StatelessWidget {
   final data;

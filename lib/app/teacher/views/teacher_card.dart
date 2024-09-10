@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:learning_management/app/teacher/views/teacher_screen.dart';
 import 'package:learning_management/utils/app_icon.dart';
-import '../../../../../widgtets/custom_see_all.dart';
+
+import '../../../widgets/custom_see_all.dart';
 import 'teacher_details.dart';
 import '../utils/teacher_utils.dart';
 

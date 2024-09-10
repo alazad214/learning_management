@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:learning_management/widgtets/backappbar.dart';
-import 'package:learning_management/widgtets/small_container.dart';
-import 'package:learning_management/widgtets/text1.dart';
+
+import '../../../widgets/backappbar.dart';
+import '../../../widgets/small_container.dart';
+import '../../../widgets/text1.dart';
+
 
 class ModuleScreen extends StatelessWidget {
   const ModuleScreen({super.key});

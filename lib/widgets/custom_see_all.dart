@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:learning_management/widgtets/text1.dart';
-import 'package:learning_management/widgtets/text2.dart';
+import 'package:learning_management/widgets/text1.dart';
+import 'package:learning_management/widgets/text2.dart';
 
 class CustomSeeAll extends StatelessWidget {
   const CustomSeeAll(

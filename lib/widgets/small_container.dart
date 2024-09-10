@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:learning_management/widgtets/text2.dart';
+import 'package:learning_management/widgets/text2.dart';
 
 class SmallContainer extends StatelessWidget {
   const SmallContainer({super.key, this.text, this.bgcolor, this.color, this.fontWeight});

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:learning_management/app/teacher/views/teacher_page_card.dart';
-import 'package:learning_management/widgtets/backappbar.dart';
+
+import '../../../widgets/backappbar.dart';
 
 class TeacherScreen extends StatelessWidget {
   const TeacherScreen({super.key, this.appbar, this.data});

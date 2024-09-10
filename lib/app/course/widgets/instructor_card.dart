@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:learning_management/utils/colors.dart';
-import 'package:learning_management/widgtets/row_icon_text.dart';
+
+import '../../../widgets/row_icon_text.dart';
 
 class InstructorCard extends StatelessWidget {
   const InstructorCard({super.key});

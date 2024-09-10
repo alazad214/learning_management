@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
-import '../../../../../../widgtets/small_container.dart';
-import '../../../../../../widgtets/text1.dart';
+
+import '../../../widgets/small_container.dart';
+import '../../../widgets/text1.dart';
+
 
 class LiveDetailsMain extends StatelessWidget {
   const LiveDetailsMain(

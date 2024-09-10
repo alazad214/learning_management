@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:learning_management/widgtets/backappbar.dart';
-import 'package:learning_management/widgtets/row_icon_text.dart';
-import 'package:learning_management/widgtets/text1.dart';
+
+import '../../widgets/backappbar.dart';
+import '../../widgets/row_icon_text.dart';
+import '../../widgets/text1.dart';
+
 
 class AboutUsScreen extends StatelessWidget {
   const AboutUsScreen({super.key});

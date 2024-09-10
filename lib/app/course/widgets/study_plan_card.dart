@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import '../../../../widgtets/small_container.dart';
-import '../../../../widgtets/text1.dart';
-import '../../../../widgtets/text2.dart';
+
+import '../../../widgets/small_container.dart';
+import '../../../widgets/text1.dart';
+import '../../../widgets/text2.dart';
 
 class StudyPlanCard extends StatelessWidget {
   const StudyPlanCard({super.key});

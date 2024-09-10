@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:learning_management/utils/colors.dart';
-import '../../../../../widgtets/text1.dart';
+
+import '../../../widgets/text1.dart';
 
 
 class LiveClassCard extends StatelessWidget {

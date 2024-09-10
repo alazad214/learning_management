@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:learning_management/widgtets/backappbar.dart';
-import 'package:learning_management/widgtets/button2.dart';
-import 'package:learning_management/widgtets/text2.dart';
+
+import '../../../../widgets/backappbar.dart';
+import '../../../../widgets/button2.dart';
+import '../../../../widgets/text2.dart';
+
 
 class CertificateScreen extends StatelessWidget {
   const CertificateScreen({super.key});

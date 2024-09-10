@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:learning_management/app/profile/views/password_screen.dart';
 import 'package:learning_management/utils/app_image.dart';
 
-import '../../../widgtets/text1.dart';
-import '../../../widgtets/text2.dart';
+import '../../../widgets/text1.dart';
+import '../../../widgets/text2.dart';
 import '../widgets/custom_profile_pic.dart';
 import 'basic_information_screen.dart';
 
