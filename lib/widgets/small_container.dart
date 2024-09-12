@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:learning_management/widgets/text2.dart';
 
 class SmallContainer extends StatelessWidget {
-  const SmallContainer({super.key, this.text, this.bgcolor, this.color, this.fontWeight});
+  const SmallContainer(
+      {super.key, this.text, this.bgcolor, this.color, this.fontWeight});
   final text;
   final bgcolor;
   final color;
@@ -18,7 +19,7 @@ class SmallContainer extends StatelessWidget {
       child: Text2(
         text: text,
         color: color,
-        fontweight:fontWeight?? FontWeight.w500,
+        fontweight: fontWeight ?? FontWeight.w500,
       ),
     );
   }

@@ -4,8 +4,10 @@ import 'package:learning_management/utils/app_image.dart';
 import 'package:learning_management/utils/colors.dart';
 import 'package:learning_management/widgets/text1.dart';
 import 'package:learning_management/widgets/text2.dart';
-import '../app/profile/views/profile_screen.dart';
-import '../app/settings/notification_page.dart';
+
+import '../views/notification/notification_page.dart';
+import '../views/profile/views/profile_screen.dart';
+
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   const CustomAppBar({super.key});
