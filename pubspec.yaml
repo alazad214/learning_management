@@ -54,6 +54,7 @@ dependencies:
   video_player: ^2.4.9
 
   fluttertoast: ^8.2.8
+  connectivity_plus: ^3.0.0
 
 
 dev_dependencies:
