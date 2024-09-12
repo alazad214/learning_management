@@ -5,9 +5,9 @@ import 'package:learning_management/utils/colors.dart';
 import 'package:learning_management/widgets/text1.dart';
 import 'package:learning_management/widgets/text2.dart';
 
+import '../utils/app_config.dart';
 import '../views/notification/notification_page.dart';
 import '../views/profile/views/profile_screen.dart';
-
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   const CustomAppBar({super.key});
@@ -28,7 +28,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
           children: [
             InkWell(
               onTap: () {
-                Get.to(() =>  ProfileScreen());
+                Get.to(() => ProfileScreen());
               },
               child: Container(
                   height: 45,
@@ -38,7 +38,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                       color: Colors.blueAccent.withOpacity(0.2),
                       shape: BoxShape.circle),
                   child: Image.asset(
-                    AppImage.mypic,
+                    AppConfig.appImage,
                     fit: BoxFit.cover,
                   )),
             ),

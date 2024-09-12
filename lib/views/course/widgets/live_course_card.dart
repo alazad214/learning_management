@@ -5,8 +5,6 @@ import '../views/live_course_details.dart';
 import 'course_card.dart';
 import 'course_utils.dart';
 
-
-
 class LiveCourseCard extends StatelessWidget {
   const LiveCourseCard({
     super.key,

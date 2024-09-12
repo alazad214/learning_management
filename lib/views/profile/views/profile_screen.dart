@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:learning_management/views/profile/views/password_management_screen.dart';
 import '../../../business logic/controllers/profile_controller.dart';
+import '../../../utils/app_config.dart';
 import '../widgets/profile_card.dart';
 
 class ProfileScreen extends StatelessWidget {
@@ -22,7 +24,7 @@ class ProfileScreen extends StatelessWidget {
               children: [
                 CircleAvatar(
                   radius: 70,
-                  backgroundImage: AssetImage('assets/logo/tripti.jpg'),
+                  backgroundImage: AssetImage(AppConfig.appImage),
                   backgroundColor: Colors.transparent,
                 ),
                 SizedBox(height: 15),
@@ -51,7 +53,9 @@ class ProfileScreen extends StatelessWidget {
                 ProfileCard(
                   title: 'Password Management',
                   icon: Icons.lock,
-                  onTap: () {},
+                  onTap: () {
+                    Get.to(() => PasswordManagementScreen());
+                  },
                 ),
                 ProfileCard(
                   title: 'Dark Mode',

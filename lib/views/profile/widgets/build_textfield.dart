@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 Widget buildTextField({
-  required String label,
+  required String hintText,
+  final prefixIcon,
+  final readOnly,
   required String initialValue,
   required Function(String) onChanged,
   int maxLines = 1,
@@ -9,8 +11,10 @@ Widget buildTextField({
   return TextField(
     maxLines: maxLines,
     controller: TextEditingController(text: initialValue),
+    readOnly: readOnly??false,
     decoration: InputDecoration(
-      labelText: label,
+      hintText: hintText,
+      prefixIcon: prefixIcon,
       labelStyle: TextStyle(color: Colors.grey[800]),
       filled: true,
       fillColor: Colors.white,

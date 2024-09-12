@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:learning_management/utils/app_config.dart';
 import 'package:learning_management/widgets/app_button.dart';
 import '../../../business logic/controllers/profile_edit_controller.dart';
 import '../widgets/build_textfield.dart';
@@ -24,33 +25,37 @@ class EditProfileScreen extends StatelessWidget {
               children: [
                 CircleAvatar(
                   radius: 60,
-                  backgroundImage: AssetImage('assets/logo/tripti.jpg'),
+                  backgroundImage: AssetImage(AppConfig.appImage),
                 ),
                 SizedBox(height: 20),
                 // Name Field
                 buildTextField(
-                  label: 'Name',
+                  hintText: 'Name',
+                  prefixIcon: Icon(Icons.person),
                   initialValue: controller.userName.value,
                   onChanged: (value) => controller.updateName(value),
                 ),
                 SizedBox(height: 20),
                 // Email Field
                 buildTextField(
-                  label: 'Email',
+                  hintText: 'Email',
+                  readOnly: true,
+                  prefixIcon: Icon(Icons.email),
                   initialValue: controller.userEmail.value,
                   onChanged: (value) => controller.updateEmail(value),
                 ),
                 SizedBox(height: 20),
                 // Phone Field
                 buildTextField(
-                  label: 'Phone',
+                  hintText: 'Phone',
+                  prefixIcon: Icon(Icons.phone),
                   initialValue: controller.userPhone.value,
                   onChanged: (value) => controller.updatePhone(value),
                 ),
                 SizedBox(height: 20),
                 // Bio Field
                 buildTextField(
-                  label: 'Bio',
+                  hintText: 'Bio',
                   initialValue: controller.userBio.value,
                   maxLines: 3,
                   onChanged: (value) => controller.updateBio(value),
