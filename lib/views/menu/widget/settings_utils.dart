@@ -9,7 +9,7 @@ List<dynamic> settingsUtils = [
     "icon": "assets/icon/profile.png",
     'text': 'Profile',
     'text2': 'Visit Your Profile',
-    'page': const ProfileScreen()
+    'page':  ProfileScreen()
   },
   {
     "icon": "assets/icon/team.png",

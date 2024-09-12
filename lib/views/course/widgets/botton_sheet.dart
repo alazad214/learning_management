@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:learning_management/utils/colors.dart';
 
-import '../../../widgets/small_container.dart';
+import '../../../widgets/small_button.dart';
 import '../../../widgets/text1.dart';
 
 
@@ -42,7 +42,7 @@ class BottonSheet extends StatelessWidget {
               ),
             ],
           ),
-          SmallContainer(
+          SmallButton(
             text: 'Join 2nd Batch',
             color: AppColor.white,
             bgcolor: AppColor.red,

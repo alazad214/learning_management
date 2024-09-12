@@ -5,7 +5,7 @@ import 'package:learning_management/utils/colors.dart';
 import '../../../../../utils/app_icon.dart';
 
 import '../../../widgets/backappbar.dart';
-import '../../../widgets/small_container.dart';
+import '../../../widgets/small_button.dart';
 import '../../../widgets/text1.dart';
 import '../../../widgets/text2.dart';
 import '../../course/views/module_screen.dart';
@@ -45,7 +45,7 @@ class MyCourseDetails extends StatelessWidget {
                         text: "Flutter App Development",
                       ),
                       const SizedBox(height: 10.0),
-                      const SmallContainer(
+                      const SmallButton(
                         text: "Batch -35",
                       )
                     ],

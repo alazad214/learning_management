@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 
-import '../../../widgets/small_container.dart';
+import '../../../widgets/small_button.dart';
 import '../../../widgets/text1.dart';
 
 
@@ -37,7 +37,7 @@ class LiveDetailsMain extends StatelessWidget {
                   text: title,
                 ),
                 const SizedBox(height: 10.0),
-                const SmallContainer(
+                const SmallButton(
                   text: "Batch- 35",
                 ),
                 const SizedBox(height: 10.0),

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../../utils/colors.dart';
-import '../../../widgets/small_container.dart';
+import '../../../widgets/small_button.dart';
 import '../../../widgets/text1.dart';
 import '../widgets/module_header.dart';
 import '../widgets/module_video_screen.dart';
@@ -37,7 +37,7 @@ class ModuleScreen extends StatelessWidget {
                         childrenPadding: EdgeInsets.zero,
                         title: Row(
                           children: [
-                            SmallContainer(
+                            SmallButton(
                               text: 'Module 1',
                             ),
                             Spacer(),

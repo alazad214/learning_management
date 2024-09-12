@@ -28,7 +28,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
           children: [
             InkWell(
               onTap: () {
-                Get.to(() => const ProfileScreen());
+                Get.to(() =>  ProfileScreen());
               },
               child: Container(
                   height: 45,

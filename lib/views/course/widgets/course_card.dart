@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../widgets/small_container.dart';
+import '../../../widgets/small_button.dart';
 
 class CourseCard extends StatelessWidget {
   const CourseCard(
@@ -62,10 +62,10 @@ class CourseCard extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      SmallContainer(
+                      SmallButton(
                         text: sit,
                       ),
-                      SmallContainer(
+                      SmallButton(
                         text: courseFee,
                       ),
                     ],

@@ -3,7 +3,7 @@
 
 import 'package:flutter/material.dart';
 
-import '../../../widgets/small_container.dart';
+import '../../../widgets/small_button.dart';
 import '../../../widgets/text1.dart';
 
 class Resoursecard extends StatelessWidget {
@@ -44,7 +44,7 @@ class Resoursecard extends StatelessWidget {
                   children: [
                     const Text1(text: "Module 1 Resourse", size: 18.0),
                     const SizedBox(height: 10),
-                    SmallContainer(
+                    SmallButton(
                       text: date,
                     )
                   ],

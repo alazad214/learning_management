@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:learning_management/utils/colors.dart';
 
 import '../../../widgets/custom_appbar.dart';
-import '../../../widgets/small_container.dart';
+import '../../../widgets/small_button.dart';
 
 
 class ClassJoin extends StatelessWidget {
@@ -56,7 +56,7 @@ class ClassJoin extends StatelessWidget {
                           border: Border.all(width: 0.1)),
                       child: Column(
                         children: [
-                          SmallContainer(
+                          SmallButton(
                             text: "Flutter App Development",
                           ),
                           Text(
@@ -96,12 +96,12 @@ class ClassJoin extends StatelessWidget {
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              SmallContainer(text: "Module-1"),
-                              SmallContainer(text: "Batch-1"),
+                              SmallButton(text: "Module-1"),
+                              SmallButton(text: "Batch-1"),
                             ],
                           ),
                           SizedBox(height: 10),
-                          SmallContainer(
+                          SmallButton(
                             text: 'Join Class',
                             fontWeight: FontWeight.bold,
                             color: Colors.white,
