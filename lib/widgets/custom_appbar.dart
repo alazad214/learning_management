@@ -33,7 +33,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
               child: Container(
                   height: 45,
                   clipBehavior: Clip.antiAlias,
-                  margin: const EdgeInsets.only(left: 10.0),
+                  margin: const EdgeInsets.only(left: 15.0),
                   decoration: BoxDecoration(
                       color: Colors.blueAccent.withOpacity(0.2),
                       shape: BoxShape.circle),
@@ -42,6 +42,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                     fit: BoxFit.cover,
                   )),
             ),
+            SizedBox(width: 10.0),
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.center,

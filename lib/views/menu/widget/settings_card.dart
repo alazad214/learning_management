@@ -29,6 +29,7 @@ class SettingsCard extends StatelessWidget {
       onTap: ontap,
       child: Container(
         height: 80,
+
         padding: const EdgeInsets.only(right: 10, left: 10),
         margin: EdgeInsets.only(bottom: 15),
         decoration: BoxDecoration(

@@ -17,7 +17,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context)
-        .size; // Use of MediaQuery.of instead of MediaQuery.sizeOf
+        .size;
 
     return Scaffold(
       body: SingleChildScrollView(
