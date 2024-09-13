@@ -3,8 +3,8 @@ import 'package:get/get.dart';
 import '../../../utils/colors.dart';
 import '../../../widgets/small_button.dart';
 import '../../../widgets/text1.dart';
-import '../widgets/module_header.dart';
-import '../widgets/module_video_screen.dart';
+import '../../course/widgets/module_header.dart';
+import '../../course/widgets/module_video_screen.dart';
 
 class ModuleScreen extends StatelessWidget {
   const ModuleScreen({super.key});
@@ -19,7 +19,7 @@ class ModuleScreen extends StatelessWidget {
             child: Column(
               children: [
                 ModuleHeader(),
-                for (int i = 0; i < 4; i++)
+                for (int i = 0; i < 2; i++)
                   Container(
                     clipBehavior: Clip.antiAlias,
                     padding: const EdgeInsets.all(10.0),
@@ -53,7 +53,7 @@ class ModuleScreen extends StatelessWidget {
                         trailing: const Icon(Icons.keyboard_arrow_down_rounded),
                         children: [
                           const Divider(),
-                          for (int i = 0; i < 5; i++)
+                          for (int i = 0; i < 2; i++)
                             ListTile(
                                 onTap: () {
                                   Get.to(() => ModuleVideoScreen());

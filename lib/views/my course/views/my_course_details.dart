@@ -6,7 +6,7 @@ import 'package:learning_management/views/my%20course/widgets/build_course_card.
 import '../../../../../utils/app_icon.dart';
 import '../../../widgets/backappbar.dart';
 import '../../../widgets/text2.dart';
-import '../../course/views/module_screen.dart';
+import 'module_screen.dart';
 import '../../resourse/views/resourse_screen.dart';
 import 'assignment_screen.dart';
 import 'certificate_screen.dart';

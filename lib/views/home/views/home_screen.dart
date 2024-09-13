@@ -5,7 +5,7 @@ import '../../../widgets/custom_see_all.dart';
 import '../../webinar/free_course_card.dart';
 import '../../course/views/join_class_screen.dart';
 import '../../course/views/record_course_card.dart';
-import '../../course/widgets/live_course_card.dart';
+import '../../live course/live_course_card.dart';
 import '../../my course/widgets/my_course_card.dart';
 import '../../teacher/views/teacher_card.dart';
 import '../widgets/home_appbar.dart';

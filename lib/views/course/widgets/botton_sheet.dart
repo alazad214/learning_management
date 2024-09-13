@@ -4,16 +4,15 @@ import 'package:learning_management/utils/colors.dart';
 import '../../../widgets/small_button.dart';
 import '../../../widgets/text1.dart';
 
-
 class BottonSheet extends StatelessWidget {
   const BottonSheet({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 130,
+      height: 85,
       width: double.infinity,
-      padding: EdgeInsets.only(top: 10, left: 20.0, right: 20.0),
+      padding: EdgeInsets.only( left: 20.0, right: 20.0, bottom: 5),
       decoration: BoxDecoration(
           color: AppColor.secondary,
           border: Border(top: BorderSide(width: 0.1)),

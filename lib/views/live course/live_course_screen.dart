@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../../widgets/backappbar.dart';
-import '../widgets/live_course_card.dart';
-
+import '../../widgets/backappbar.dart';
+import 'live_course_card.dart';
 
 class LiveCourseScreen extends StatelessWidget {
   final data;

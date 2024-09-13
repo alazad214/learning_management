@@ -121,8 +121,8 @@ class VideoDetailScreen extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 16.0),
               child: Text(
                 'This module covers advanced state management techniques, '
-                    'animations, and best UI practices in Flutter. By the end of this module, '
-                    'you will be able to implement complex state management and responsive UI designs.',
+                'animations, and best UI practices in Flutter. By the end of this module, '
+                'you will be able to implement complex state management and responsive UI designs.',
                 style: TextStyle(
                   color: Colors.black.withOpacity(0.7),
                   fontSize: 16,

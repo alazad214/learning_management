@@ -2,7 +2,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:learning_management/widgets/text1.dart';
 
-
 class RowIconText extends StatelessWidget {
   final text;
   final icon;
@@ -12,10 +11,14 @@ class RowIconText extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Icon(icon),
+        Icon(
+          icon,
+          color: Colors.amber,
+          size: 20,
+        ),
         SizedBox(width: 5),
-        Text1(
-          text: text ?? '',
+        Text(
+          text ?? '',
         ),
       ],
     );

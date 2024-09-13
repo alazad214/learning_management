@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../widgets/course_card.dart';
 import '../widgets/course_utils.dart';
-import 'live_course_details.dart';
+import '../../live course/live_course_details.dart';
 
 class RecordCourseCard extends StatelessWidget {
   const RecordCourseCard({

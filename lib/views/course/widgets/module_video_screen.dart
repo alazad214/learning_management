@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:get/get.dart';
 import 'package:chewie/chewie.dart';
+import 'package:learning_management/views/my%20course/views/certificate_screen.dart';
 import 'package:video_player/video_player.dart';
 import 'package:learning_management/widgets/app_button.dart';
 
@@ -53,9 +54,7 @@ class ModuleVideoScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
 
-    // Use the renamed controller
-    final ModuleVideoController videoController =
-        Get.put(ModuleVideoController());
+    final videoController = Get.put(ModuleVideoController());
 
     return Scaffold(
       appBar: AppBar(
@@ -96,17 +95,17 @@ class ModuleVideoScreen extends StatelessWidget {
                             color: Colors.white,
                           ),
                         ),
-                        const SizedBox(height: 10),
+                        SizedBox(height: 10),
                         Container(
                           height: 170,
                           width: size.width,
                           clipBehavior: Clip.antiAlias,
                           decoration: BoxDecoration(
                             color: Colors.black,
-                            borderRadius: BorderRadius.circular(20),
+                            borderRadius: BorderRadius.circular(15),
                           ),
                           child: Obx(() => videoController.isLoading.value
-                              ? const Center(
+                              ? Center(
                                   child: CircularProgressIndicator(),
                                 )
                               : (videoController.chewieController != null
@@ -114,7 +113,7 @@ class ModuleVideoScreen extends StatelessWidget {
                                       controller:
                                           videoController.chewieController!,
                                     )
-                                  : const Center(
+                                  : Center(
                                       child: Text(
                                         'Video not available',
                                         style: TextStyle(color: Colors.white),
@@ -203,7 +202,9 @@ class ModuleVideoScreen extends StatelessWidget {
                   ],
                 ),
                 const SizedBox(height: 15),
-                AppButton(text: 'Claim Certificate')
+                AppButton(
+                    text: 'Claim Certificate',
+                    onTap: () => Get.to(() => CertificateScreen()))
               ],
             )
           ],
