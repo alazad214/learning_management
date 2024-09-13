@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../../utils/colors.dart';
 import '../../../widgets/custom_see_all.dart';
-import '../../course/views/free_course_screen.dart';
+import '../../webinar/free_course_card.dart';
 import '../../course/views/join_class_screen.dart';
 import '../../course/views/record_course_card.dart';
 import '../../course/widgets/live_course_card.dart';
@@ -16,8 +16,7 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final size = MediaQuery.of(context)
-        .size;
+    final size = MediaQuery.of(context).size;
 
     return Scaffold(
       body: SingleChildScrollView(
@@ -31,7 +30,7 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: EdgeInsets.symmetric(horizontal: 20, vertical: 35),
+              padding: EdgeInsets.symmetric(horizontal: 15, vertical: 35),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -43,7 +42,7 @@ class HomeScreen extends StatelessWidget {
                   Slider1(),
 
                   ///Free Course...
-                  FreeCourseScreen(),
+                  FreeCourseCard(),
                   Divider(color: Colors.blueAccent),
                   SizedBox(height: 10.0),
 

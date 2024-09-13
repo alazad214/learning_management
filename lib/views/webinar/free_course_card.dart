@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:learning_management/utils/app_icon.dart';
 import 'package:learning_management/utils/colors.dart';
-import '../../../business logic/controllers/free_course_controler.dart';
+import '../../business logic/controllers/free_course_controler.dart';
 import 'free_course_details.dart';
 
-class FreeCourseScreen extends StatelessWidget {
-  FreeCourseScreen({super.key});
+class FreeCourseCard extends StatelessWidget {
+  FreeCourseCard({super.key});
   final videoController = Get.put(VideoController());
 
   @override
@@ -26,14 +26,17 @@ class FreeCourseScreen extends StatelessWidget {
             borderRadius: BorderRadius.circular(8.0)),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Text(
-                  "ফ্রি -তে শিখুন",
-                  style: TextStyle(color: AppColor.white, fontSize: 22),
+                Text(
+                  "Watch Free Webinar",
+                  style: TextStyle(
+                      color: AppColor.white,
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold),
                 ),
                 InkWell(
                   onTap: () => Get.to(() => FreeCourseDetails()),
@@ -41,13 +44,13 @@ class FreeCourseScreen extends StatelessWidget {
                     padding: const EdgeInsets.symmetric(
                         horizontal: 10.0, vertical: 5.0),
                     decoration: BoxDecoration(
-                        color: Colors.cyan,
+                        color: Colors.red,
                         borderRadius: BorderRadius.circular(10.0)),
                     child: const Row(
                       children: [
                         Text(
-                          "ফ্রি -তে শিখুন",
-                          style: TextStyle(color: AppColor.white, fontSize: 14),
+                          "Click Now",
+                          style: TextStyle(color: AppColor.white, fontSize: 16),
                         ),
                         Icon(
                           Icons.arrow_forward,
