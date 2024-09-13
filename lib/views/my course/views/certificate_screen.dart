@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
+import '../../../widgets/backappbar.dart';
+import '../../../widgets/button2.dart';
+import '../../../widgets/text2.dart';
 
-import '../../../../widgets/backappbar.dart';
-import '../../../../widgets/button2.dart';
-import '../../../../widgets/text2.dart';
 
 
 class CertificateScreen extends StatelessWidget {
@@ -10,7 +10,7 @@ class CertificateScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return  Scaffold(
       appBar: Backappbar(
         title: 'Certificate',
       ),

@@ -1,17 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:learning_management/style/text_style.dart';
 import 'package:learning_management/utils/app_image.dart';
-import 'package:learning_management/utils/colors.dart';
+import 'package:learning_management/views/my%20course/widgets/build_course_card.dart';
 import '../../../../../utils/app_icon.dart';
-
 import '../../../widgets/backappbar.dart';
-import '../../../widgets/small_button.dart';
-import '../../../widgets/text1.dart';
 import '../../../widgets/text2.dart';
 import '../../course/views/module_screen.dart';
-import '../../menu/widget/settings_card.dart';
 import '../../resourse/views/resourse_screen.dart';
-import '../certificate/views/certificate_screen.dart';
+import 'assignment_screen.dart';
+import 'certificate_screen.dart';
 
 class MyCourseDetails extends StatelessWidget {
   const MyCourseDetails({super.key});
@@ -27,57 +25,33 @@ class MyCourseDetails extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 15.0, vertical: 15.0),
         child: ListView(
           children: [
-            Row(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                Image.asset(
-                  AppImage.mypic,
-                  height: 90.0,
-                  width: screenSize.width / 2.5,
-                  fit: BoxFit.cover,
-                ),
-                const SizedBox(width: 10.0),
-                Expanded(
-                  child: Column(
-                    children: [
-                      Text1(
-                        text: "Flutter App Development",
-                      ),
-                      const SizedBox(height: 10.0),
-                      const SmallButton(
-                        text: "Batch -35",
-                      )
-                    ],
-                  ),
-                ),
-              ],
+            Container(
+              clipBehavior: Clip.antiAlias,
+              decoration:
+                  BoxDecoration(borderRadius: BorderRadius.circular(10.0)),
+              child: Image.asset(
+                AppImage.flutterCourse,
+                height: 150.0,
+                width: screenSize.width / 2.5,
+                fit: BoxFit.cover,
+              ),
             ),
-            const SizedBox(height: 10.0),
-            Text(
-              "Since your Progress is not as excepted despite your affort",
-              style: TextStyle(fontSize: 18.0),
-            ),
-            SizedBox(
-              height: 15.0,
-            ),
-            Text(
-              "Next Batch- Wed, Aug 21, 2024",
-              style: TextStyle(fontSize: 18.0, color: Colors.green),
-            ),
+            SizedBox(height: 10),
+            Text('Flutter App Development With Rabbil Hasan',
+                overflow: TextOverflow.ellipsis,
+                maxLines: 5,
+                style: AppTextStyle1(textColor: Colors.black)),
+            Text('Instructor: Rabbil Hasan & Al Azad ',
+                overflow: TextOverflow.ellipsis,
+                maxLines: 5,
+                style: AppTextStyle2(
+                  fontSize: 16.0,
+                )),
+            SizedBox(height: 10),
             const Divider(
               height: 15,
               color: Colors.blue,
             ),
-            const SizedBox(height: 10.0),
-            SettingsCard(
-              text: 'All Module Pre-Recored Video',
-              text2: '410 videos',
-              size1: 14.0,
-              icon: AppIcon.pre_recorded,
-              bgcolor: AppColor.black.withOpacity(0.1),
-            ),
-            const Divider(height: 15),
             const SizedBox(height: 10.0),
             Wrap(
               spacing: 10,
@@ -88,7 +62,7 @@ class MyCourseDetails extends StatelessWidget {
                   Get.to(() => const ModuleScreen());
                 }),
                 _customtag('Assignment', AppIcon.assignment, () {
-                  Get.to(() => const ResourseScreen());
+                  Get.to(() => AssignmentScreen());
                 }),
                 _customtag('Recourse', AppIcon.resourse, () {
                   Get.to(() => const ResourseScreen());
@@ -101,12 +75,12 @@ class MyCourseDetails extends StatelessWidget {
             SizedBox(
               height: 15.0,
             ),
-            SettingsCard(
-              text: 'Notice Board',
-              icon: AppIcon.notice,
-              bgcolor:
-                  const Color.fromARGB(255, 234, 234, 238).withOpacity(0.1),
-              border: Border.all(width: 0.1),
+            BuildCourseCard(
+              title: 'Notice Board',
+              image: Image.asset(
+                'assets/icon/notice.png',
+                height: 40,
+              ),
             ),
           ],
         ),

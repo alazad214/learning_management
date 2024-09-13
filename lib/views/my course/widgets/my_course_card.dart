@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:learning_management/style/text_style.dart';
+import 'package:learning_management/widgets/small_button.dart';
 
 import '../../../../utils/colors.dart';
 import '../../../widgets/custom_see_all.dart';
 import '../../course/widgets/course_utils.dart';
-import 'my_course_details.dart';
+import '../views/my_course_details.dart';
 
 class MyCourseCard extends StatelessWidget {
   const MyCourseCard({super.key});
@@ -24,13 +25,11 @@ class MyCourseCard extends StatelessWidget {
           InkWell(
             onTap: () => Get.to(() => MyCourseDetails()),
             child: Container(
-              height: 80.0,
               width: double.infinity,
-              clipBehavior: Clip.antiAlias,
               margin: const EdgeInsets.only(bottom: 10.0),
-              padding: const EdgeInsets.symmetric(horizontal: 10.0),
+              padding: EdgeInsets.symmetric(horizontal: 10.0, vertical: 10),
               decoration: BoxDecoration(
-                color: AppColor.white.withOpacity(0.9),
+                color: AppColor.white,
                 border: Border.all(width: 0.1),
                 borderRadius: BorderRadius.circular(8.0),
               ),
@@ -38,8 +37,9 @@ class MyCourseCard extends StatelessWidget {
                 children: [
                   Image.asset(
                     courseUtils[i]['image'] ?? 'assets/default_image.png',
-                    width: 70,
-                    fit: BoxFit.cover,
+                    width: 100,
+                    height: 80,
+                    fit: BoxFit.contain,
                   ),
                   const SizedBox(width: 15.0),
                   Expanded(
@@ -49,13 +49,23 @@ class MyCourseCard extends StatelessWidget {
                       children: [
                         Text(
                           courseUtils[i]['title'] ?? 'Course Title',
-                          style: AppTextStyle1(fontSize: 16.0),
+                          style: AppTextStyle1(
+                              fontSize: 16.0, textColor: Colors.black),
                         ),
-                        const SizedBox(height: 5.0),
-                        Text(
-                          'Module - ${'45'}',
-                          style: AppTextStyle2(),
-                        ),
+                        SizedBox(height: 10.0),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            SmallButton(
+                              text: 'Ongoing',
+                            ),
+                            SmallButton(
+                              text: 'Batch 3',
+                              bgcolor: Colors.blueAccent.withOpacity(0.1),
+                              color: Colors.black,
+                            ),
+                          ],
+                        )
                       ],
                     ),
                   ),

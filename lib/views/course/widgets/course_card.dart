@@ -23,10 +23,10 @@ class CourseCard extends StatelessWidget {
     return InkWell(
       onTap: ontap,
       child: Container(
-        height: 200.0,
         width: 240,
         clipBehavior: Clip.antiAlias,
         margin: const EdgeInsets.only(right: 10),
+        padding: EdgeInsets.only(bottom: 15),
         decoration: BoxDecoration(
             color: Colors.white.withOpacity(0.9),
             border: Border.all(width: 0.1),
@@ -51,14 +51,15 @@ class CourseCard extends StatelessWidget {
                 children: [
                   Text(
                     title,
-                    style: const TextStyle(fontSize: 14.0),
+                    overflow: TextOverflow.ellipsis,
+                    style:
+                        TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
                   ),
                   Text(
-                    instuctorName,
-                    style:
-                        const TextStyle(fontSize: 12.0, color: Colors.black45),
+                    "Instuctor: ${instuctorName}",
+                    style: TextStyle(fontSize: 14.0, color: Colors.blueAccent),
                   ),
-                  const SizedBox(height: 5.0),
+                  SizedBox(height: 10.0),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -66,7 +67,8 @@ class CourseCard extends StatelessWidget {
                         text: sit,
                       ),
                       SmallButton(
-                        text: courseFee,
+                        text: "৳ ${courseFee}",
+                        bgcolor: Colors.black54,
                       ),
                     ],
                   )
