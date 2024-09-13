@@ -36,7 +36,7 @@ class HomeScreen extends StatelessWidget {
                 children: [
                   ///Custom Home AppBar...
                   HomeAppBar(),
-                  SizedBox(height: 20.0),
+                  SizedBox(height: 5.0),
 
                   ///Custom Slider...
                   Slider1(),

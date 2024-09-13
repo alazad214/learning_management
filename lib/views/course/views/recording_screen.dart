@@ -8,22 +8,8 @@ class RecordingScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
-        child: SingleChildScrollView(
-          child: AlignedGridView.count(
-            padding: const EdgeInsets.all(12.0),
-            shrinkWrap: true,
-            physics: const NeverScrollableScrollPhysics(),
-            crossAxisCount: 1,
-            itemCount: 2,
-            itemBuilder: (ctx, index) {
-              return RecordCourseCard();
-            },
-            mainAxisSpacing: 5.0,
-            crossAxisSpacing: 5.0,
-          ),
-        ),
-      ),
-    );
+        body: Center(
+      child: Text("Comming Soon.."),
+    ));
   }
 }

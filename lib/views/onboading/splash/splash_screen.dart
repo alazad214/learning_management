@@ -18,11 +18,12 @@ class SplashScreen extends StatelessWidget {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text(
-                      AppConfig.name,
-                      style: TextStyle(color: AppColor.primary, fontSize: 18.0),
-                    ),
-                    SizedBox(height: 20.0),
+
+                    ///App Logo...
+                    Image.asset(AppConfig.appImage,
+                        height: screenSize.height / 10),
+                    SizedBox(height: 10.0),
+
                     Padding(
                         padding: EdgeInsets.symmetric(horizontal: 100.0),
                         child: LinearProgressIndicator(
