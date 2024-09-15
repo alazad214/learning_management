@@ -1,8 +1,54 @@
+import 'dart:convert';
+
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
+import 'package:http/http.dart' as http;
+import 'package:learning_management/app/modules/nav%20bar/views/bottom_nav_screen.dart';
+import 'package:learning_management/style/toast_style.dart';
 
 class LoginController extends GetxController {
   final globalKey = GlobalKey<FormState>();
   RxString emailError = RxString('');
   final RxBool isLoading = false.obs;
+  var isObscure = true.obs;
+  var email = ''.obs;
+  var password = ''.obs;
+
+  ///Password Obsecure Toggle...
+  void toggleObscureText() {
+    isObscure.value = !isObscure.value;
+  }
+
+  Future<void> login() async {
+    const String apiUrl =
+        'https://lms-server-theta.vercel.app/api/v1/user/sign-in';
+    final Map<String, dynamic> loginData = {
+      "email": email.value,
+      "password": password.value,
+    };
+
+    isLoading(true);
+    try {
+      final response = await http.post(
+        Uri.parse(apiUrl),
+        headers: {"Content-Type": "application/json"},
+        body: json.encode(loginData),
+      );
+
+      if (response.statusCode == 200) {
+        final data = json.decode(response.body);
+
+        if (data['status'] == 'success') {
+          Get.offAll(() => BottomNavScreen());
+          SuccessToast('Successfully Login');
+        } else {
+          ErrorToast(data['message']);
+        }
+      } else {}
+    } catch (e) {
+      ErrorToast(e);
+    } finally {
+      isLoading(false);
+    }
+  }
 }
