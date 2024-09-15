@@ -33,8 +33,8 @@ class RegisterController extends GetxController {
 
   Future<void> register() async {
     try {
+      isLoading(true);
       String url = "https://lms-server-theta.vercel.app/api/v1/user/sign-up";
-
       Map<String, dynamic> requestBody = {
         "firstName": firstName.value,
         "lastName": lastName.value,
@@ -44,7 +44,7 @@ class RegisterController extends GetxController {
         "confirmPassword": confirmPassword.value,
         "img": ""
       };
-      isLoading(true);
+
       final response = await http.post(
         Uri.parse(url),
         body: jsonEncode(requestBody),

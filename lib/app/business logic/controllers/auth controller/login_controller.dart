@@ -5,6 +5,7 @@ import 'package:get/get.dart';
 import 'package:http/http.dart' as http;
 import 'package:learning_management/app/modules/nav%20bar/views/bottom_nav_screen.dart';
 import 'package:learning_management/style/toast_style.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class LoginController extends GetxController {
   final globalKey = GlobalKey<FormState>();
@@ -17,6 +18,11 @@ class LoginController extends GetxController {
   ///Password Obsecure Toggle...
   void toggleObscureText() {
     isObscure.value = !isObscure.value;
+  }
+
+  Future<void> saveToken(String token) async {
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setString('userToken', token);
   }
 
   Future<void> login() async {
@@ -38,6 +44,10 @@ class LoginController extends GetxController {
       if (response.statusCode == 200) {
         final data = json.decode(response.body);
 
+        ///Save User Token...
+        await saveToken(data['token']);
+
+        ///Login check...
         if (data['status'] == 'success') {
           Get.offAll(() => BottomNavScreen());
           SuccessToast('Successfully Login');
