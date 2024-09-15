@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:learning_management/utils/app_image.dart';
+import 'package:learning_management/style/text_style.dart';
 import 'package:learning_management/utils/colors.dart';
-import 'package:learning_management/widgets/text1.dart';
-import 'package:learning_management/widgets/text2.dart';
-
+import '../app/modules/notification/notification_page.dart';
+import '../app/modules/profile/views/profile_screen.dart';
 import '../utils/app_config.dart';
-import '../views/notification/notification_page.dart';
-import '../views/profile/views/profile_screen.dart';
+
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   const CustomAppBar({super.key});
@@ -47,14 +45,10 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text1(
-                  text: "Al Azad",
-                  color: AppColor.white,
-                ),
-                Text2(
-                  text: "ID-452585",
-                  color: AppColor.white2,
-                )
+
+                Text('Al Azad', style: AppTextStyle1()),
+                Text('ID-452585', style: AppTextStyle2()),
+
               ],
             ),
             const Spacer(),

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../../utils/colors.dart';
-import '../../widgets/text2.dart';
+import 'package:learning_management/style/text_style.dart';
 
 class Apprichtext extends StatelessWidget {
   final text;
@@ -15,18 +14,15 @@ class Apprichtext extends StatelessWidget {
     return Padding(
       padding: padding ?? EdgeInsets.only(top: 20),
       child: Row(
-      mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Text2(
-            text: text ?? "Don't have an account?  ",
-          ),
+          Text(text ?? "Don't have an account?  ",
+              style: AppTextStyle2(textColor: Colors.black)),
           InkWell(
             onTap: ontap,
-            child: Text2(
-              text: text2 ?? "Register",
-              fontweight: FontWeight.bold,
-              color: AppColor.primary,
-            ),
+            child: Text(text2 ?? "Don't have an account?",
+                style: AppTextStyle2(
+                    textColor: Colors.blue, fontWeight: FontWeight.bold)),
           ),
         ],
       ),

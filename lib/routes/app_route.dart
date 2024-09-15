@@ -1,11 +1,11 @@
 import 'package:get/get_navigation/src/routes/get_route.dart';
-import '../views/auth/Login/login_screen.dart';
-import '../views/course/views/join_class_screen.dart';
-import '../views/home/views/home_screen.dart';
-import '../views/notification/notification_page.dart';
-import '../views/onboading/onboading/onboading_screen.dart';
-import '../business logic/bindings/splash_bindings.dart';
-import '../views/onboading/splash/splash_screen.dart';
+import '../app/business logic/bindings/splash_bindings.dart';
+import '../app/modules/auth/Login/login_screen.dart';
+import '../app/modules/course/views/join_class_screen.dart';
+import '../app/modules/home/views/home_screen.dart';
+import '../app/modules/notification/notification_page.dart';
+import '../app/modules/onboading/onboading/onboading_screen.dart';
+import '../app/modules/onboading/splash/splash_screen.dart';
 
 /// INITIAL UNIQUE ROUTE NAME
 const String splash = '/splash_screen';
@@ -31,7 +31,7 @@ List<GetPage> getPages = [
   ),
   GetPage(
     name: login,
-    page: () => const LoginScreen(),
+    page: () => LoginScreen(),
   ),
   GetPage(
     name: course,

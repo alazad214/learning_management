@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:learning_management/app/modules/auth/forget/forget_screen.dart';
 import 'package:learning_management/utils/colors.dart';
 
 TextStyle AppTextStyle1(
     {Color? textColor, FontWeight? fontWeight, double? fontSize}) {
   return TextStyle(
-    fontSize: fontSize ?? 22.0,
+    fontSize: fontSize ?? 22.sp,
     color: textColor ?? AppColor.primary,
     fontWeight: fontWeight ?? FontWeight.bold,
     fontFamily: "robotomono",
@@ -14,10 +16,9 @@ TextStyle AppTextStyle1(
 TextStyle AppTextStyle2(
     {Color? textColor, FontWeight? fontWeight, double? fontSize}) {
   return TextStyle(
-    fontSize: fontSize ?? 15.0,
+    fontSize: fontSize ?? 15.sp,
     color: textColor ?? Colors.black.withOpacity(0.6),
     fontWeight: fontWeight ?? FontWeight.w500,
-
     fontFamily: "robotomono",
   );
 }

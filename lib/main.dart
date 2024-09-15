@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:learning_management/routes/app_route.dart';
 import 'package:learning_management/utils/app_config.dart';
-import 'business logic/bindings/internet_bindings.dart';
 
 void main() async {
   /// Ensure Flutter bindings
@@ -12,8 +12,6 @@ void main() async {
   /// System Overlay Style...
   SystemChrome.setSystemUIOverlayStyle(
       const SystemUiOverlayStyle(statusBarColor: Colors.transparent));
-
-
 
   /// Run the app
   runApp(MyApp());
@@ -24,11 +22,18 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GetMaterialApp(
-      title: AppConfig.name,
-      debugShowCheckedModeBanner: false,
-      initialRoute: splash,
-      getPages: getPages,
+    return ScreenUtilInit(
+      designSize: const Size(360, 690),
+      minTextAdapt: true,
+      splitScreenMode: true,
+      builder: (_, child) {
+        return GetMaterialApp(
+          title: AppConfig.name,
+          debugShowCheckedModeBanner: false,
+          initialRoute: splash,
+          getPages: getPages,
+        );
+      },
     );
   }
 }
