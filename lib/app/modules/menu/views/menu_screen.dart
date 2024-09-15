@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:learning_management/app/business%20logic/controllers/auth%20controller/logout_controller.dart';
+import 'package:learning_management/widgets/app_dialog.dart';
 import '../../../../style/text_style.dart';
 import '../../../../widgets/custom_appbar.dart';
 import '../widget/settings_card.dart';
 import '../widget/settings_utils.dart';
 
 class MenuScreen extends StatelessWidget {
-  const MenuScreen({super.key});
+  MenuScreen({super.key});
+  final controller = Get.put(LogoutController());
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +19,6 @@ class MenuScreen extends StatelessWidget {
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 25.0, vertical: 20),
             child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 for (int i = 0; i < settingsUtils.length; i++)
                   SettingsCard(
@@ -27,12 +29,30 @@ class MenuScreen extends StatelessWidget {
                       Get.to(settingsUtils[i]["page"]);
                     },
                   ),
-
-                //APP VERSION
-                const SizedBox(height: 20),
-                Align(
-                    alignment: Alignment.center,
-                    child: Text('v.2.99.0', style: AppTextStyle2()))
+                SizedBox(height: 20),
+                TextButton(
+                    onPressed: () {
+                      AppDialog(context, Icon(Icons.logout), 'Confirm Logout',
+                          'Are you sure you want to logout? You will need to log in again to access your account.',
+                          () {
+                        controller.logout();
+                      });
+                    },
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Text(
+                          "Logout  ",
+                          style: AppTextStyle1(fontSize: 16),
+                        ),
+                        Icon(
+                          Icons.logout,
+                          size: 20.0,
+                          color: Colors.blue,
+                        )
+                      ],
+                    )),
               ],
             ),
           ),
