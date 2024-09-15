@@ -1,6 +1,6 @@
 import 'package:get/get.dart';
 
-import '../controllers/internet_controller.dart';
+import '../controllers/others controller/internet_controller.dart';
 
 class InternetBindings extends Bindings {
   @override

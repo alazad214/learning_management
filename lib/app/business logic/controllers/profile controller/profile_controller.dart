@@ -1,5 +1,5 @@
 import 'package:get/get.dart';
-import '../../modules/profile/views/edit_profile_screen.dart';
+import '../../../modules/profile/views/edit_profile_screen.dart';
 
 class ProfileController extends GetxController {
   var userName = "Tripty Chowdhury".obs;

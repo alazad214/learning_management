@@ -4,16 +4,16 @@ import 'package:get/get.dart';
 import 'package:learning_management/widgets/appRichText.dart';
 import 'package:learning_management/style/text_style.dart';
 import 'package:learning_management/style/textfiled_style.dart';
-import 'package:learning_management/style/toast_style.dart';
 import '../../../../utils/app_image.dart';
 import '../../../../utils/input_validation.dart';
 import '../../../../widgets/app_button.dart';
-import '../../../business logic/controllers/login_controller.dart';
+import '../../../business logic/controllers/auth controller/register_controller.dart';
 import '../Login/login_screen.dart';
 
 class RegisterScreen extends StatelessWidget {
   RegisterScreen({super.key});
-  final controller = Get.put(LoginController());
+  final controller = Get.put(RegisterController());
+
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
@@ -44,53 +44,84 @@ class RegisterScreen extends StatelessWidget {
                     child: Column(
                       children: [
                         TextFormField(
-                          decoration:
-                              appInputDecoretion('First Name', Icons.person),
+                          decoration: appInputDecoration(
+                              hinttext: 'First Name', prefixIcon: Icons.person),
                           validator: InputValidator.validateUsername,
+                          onChanged: (value) {
+                            controller.firstName.value = value;
+                          },
                         ),
                         SizedBox(height: 15.h),
                         TextFormField(
-                          decoration:
-                              appInputDecoretion('Last Name', Icons.person),
+                          decoration: appInputDecoration(
+                              hinttext: 'Last Name', prefixIcon: Icons.person),
                           validator: InputValidator.validateUsername,
+                          onChanged: (value) {
+                            controller.lastName.value = value;
+                          },
                         ),
                         SizedBox(height: 15.h),
                         TextFormField(
-                          decoration:
-                              appInputDecoretion('Your Email', Icons.email),
+                          decoration: appInputDecoration(
+                              hinttext: 'Your Email', prefixIcon: Icons.email),
                           validator: InputValidator.validateEmail,
+                          onChanged: (value) {
+                            controller.email.value = value;
+                            controller.createUsername(value);
+                          },
                         ),
                         SizedBox(height: 15.h),
-                        TextFormField(
-                          obscureText: true,
-                          decoration: appInputDecoretion(
-                              'Your Password', Icons.remove_red_eye),
-                          validator: InputValidator.validatePassword,
-                        ),
+                        Obx(() {
+                          return TextFormField(
+                            obscureText: controller.isObscure.value,
+                            decoration: appInputDecoration(
+                                hinttext: 'Your Password',
+                                prefixIcon: controller.isObscure.value
+                                    ? Icons.visibility
+                                    : Icons.visibility_off,
+                                ontap: () => controller.toggleObscureText()),
+                            validator: InputValidator.validatePassword,
+                            onChanged: (value) {
+                              controller.password.value = value;
+                            },
+                          );
+                        }),
                         SizedBox(height: 15.h),
-                        TextFormField(
-                          obscureText: true,
-                          decoration: appInputDecoretion(
-                              'Re-type Your Password', Icons.remove_red_eye),
-                          validator: InputValidator.validatePassword,
-                        ),
+                        Obx(() {
+                          return TextFormField(
+                            obscureText: controller.isObscure.value,
+                            decoration: appInputDecoration(
+                                hinttext: 'Re-type Your Password',
+                                prefixIcon: controller.isObscure.value
+                                    ? Icons.visibility
+                                    : Icons.visibility_off,
+                                ontap: () => controller.toggleObscureText()),
+                            validator: InputValidator.validatePassword,
+                            onChanged: (value) {
+                              controller.confirmPassword.value = value;
+                            },
+                          );
+                        }),
                       ],
                     ),
                   ),
                   SizedBox(
-                    height: 15.h,
+                    height: 20.h,
                   ),
 
-                  // Login Button
-                  AppButton(
-                    text: "Register",
-                    onTap: () {
-                      SuccessToast('Successfully Successfully Register  ');
-                      Get.to(() => LoginScreen());
-                    },
-                  ),
+                  /// Login Button...
 
-                  // Login Account Button
+                  Obx(() => AppButton(
+                        text: "Register",
+                        isLoading: controller.isLoading.value,
+                        onTap: () {
+                          if (controller.globalKey.currentState!.validate()) {
+                            controller.register();
+                          }
+                        },
+                      )),
+
+                  /// Login Account Button...
                   Apprichtext(
                       text2: 'Log In',
                       ontap: () => Get.offAll(() => LoginScreen()))

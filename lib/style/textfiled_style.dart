@@ -1,27 +1,35 @@
 import 'package:flutter/material.dart';
-import 'package:learning_management/utils/colors.dart';
 
-InputDecoration appInputDecoretion(label, icon) {
+InputDecoration appInputDecoration({
+  hinttext,
+  prefixIcon,
+  VoidCallback? ontap,
+}) {
   return InputDecoration(
-    label: Text(label ?? " "),
-    suffixIcon: Icon(icon ?? Icons.email_outlined),
+    hintText: hinttext ?? ' ',
+    prefixIcon: ontap != null
+        ? IconButton(
+            onPressed: ontap,
+            icon: Icon(prefixIcon),
+          )
+        : Icon(prefixIcon),
     filled: true,
+    fillColor: Colors.white,
 
-    //enable-->
+    // Enable border
     enabledBorder: OutlineInputBorder(
       borderRadius: BorderRadius.circular(14.0),
-      borderSide:
-          BorderSide(color: AppColor.primary.withOpacity(0.7), width: 1),
+      borderSide: const BorderSide(color: Colors.blue, width: 1),
     ),
-    //focus-->
+    // Focus border
     focusedBorder: OutlineInputBorder(
       borderSide: const BorderSide(
-        color: AppColor.primary,
+        color: Colors.blue,
         width: 2,
       ),
       borderRadius: BorderRadius.circular(14.0),
     ),
-    //focus-->
+    // Error border
     errorBorder: OutlineInputBorder(
       borderSide: const BorderSide(
         color: Colors.red,
@@ -30,8 +38,8 @@ InputDecoration appInputDecoretion(label, icon) {
       borderRadius: BorderRadius.circular(14.0),
     ),
     focusedErrorBorder: OutlineInputBorder(
-      borderSide:  BorderSide(
-        color: AppColor.primary,
+      borderSide: const BorderSide(
+        color: Colors.blue,
         width: 2,
       ),
       borderRadius: BorderRadius.circular(14.0),

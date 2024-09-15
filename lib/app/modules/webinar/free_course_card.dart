@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:learning_management/utils/app_icon.dart';
 import 'package:learning_management/utils/colors.dart';
-import '../../business logic/controllers/free_course_controler.dart';
+import '../../business logic/controllers/course controller/free_course_controler.dart';
 import 'free_course_details.dart';
 
 class FreeCourseCard extends StatelessWidget {

@@ -11,7 +11,6 @@ import '../../../../widgets/app_button.dart';
 import '../Login/login_screen.dart';
 import '../register/register_screen.dart';
 
-
 class ForgetScreen extends StatelessWidget {
   const ForgetScreen({super.key});
 
@@ -51,15 +50,16 @@ class ForgetScreen extends StatelessWidget {
                           child: Column(
                             children: [
                               TextFormField(
-                                decoration: appInputDecoretion(
-                                    'Your Email', Icons.email),
+                                decoration: appInputDecoration(
+                                    hinttext: 'Your Email',
+                                    prefixIcon: Icons.email),
                                 validator: InputValidator.validateEmail,
                               ),
                             ],
                           ),
                         ),
 
-                         SizedBox(
+                        SizedBox(
                           height: 15.h,
                         ),
 

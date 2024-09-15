@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:learning_management/app/modules/profile/views/password_management_screen.dart';
 import '../../../../utils/app_config.dart';
-import '../../../business logic/controllers/profile_controller.dart';
+import '../../../business logic/controllers/profile controller/profile_controller.dart';
 import '../widgets/profile_card.dart';
 
 class ProfileScreen extends StatelessWidget {

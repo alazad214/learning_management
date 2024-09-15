@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:learning_management/utils/app_config.dart';
 import 'package:learning_management/widgets/app_button.dart';
-import '../../../business logic/controllers/profile_edit_controller.dart';
+import '../../../business logic/controllers/profile controller/profile_edit_controller.dart';
 import '../widgets/build_textfield.dart';
 
 class EditProfileScreen extends StatelessWidget {

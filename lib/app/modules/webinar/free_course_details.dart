@@ -4,7 +4,7 @@ import 'package:learning_management/style/text_style.dart';
 import 'package:learning_management/utils/colors.dart';
 import 'package:learning_management/widgets/small_button.dart';
 import '../../../widgets/backappbar.dart';
-import '../../business logic/controllers/free_course_controler.dart';
+import '../../business logic/controllers/course controller/free_course_controler.dart';
 
 class FreeCourseDetails extends StatelessWidget {
   FreeCourseDetails({super.key});

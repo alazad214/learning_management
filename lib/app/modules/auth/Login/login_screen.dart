@@ -8,17 +8,16 @@ import '../../../../utils/app_image.dart';
 import '../../../../utils/input_validation.dart';
 import '../../../../widgets/appRichText.dart';
 import '../../../../widgets/app_button.dart';
-import '../../../business logic/controllers/login_controller.dart';
+import '../../../business logic/controllers/auth controller/login_controller.dart';
 import '../../nav bar/views/bottom_nav_screen.dart';
 import '../forget/forget_screen.dart';
 import '../register/register_screen.dart';
 
 class LoginScreen extends StatelessWidget {
-   LoginScreen({super.key});
+  LoginScreen({super.key});
   final controller = Get.put(LoginController());
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
       body: SafeArea(
         child: Padding(
@@ -53,15 +52,17 @@ class LoginScreen extends StatelessWidget {
                         child: Column(
                           children: [
                             TextFormField(
-                              decoration:
-                                  appInputDecoretion('Your Email', Icons.email),
+                              decoration: appInputDecoration(
+                                  hinttext: 'Your Email',
+                                  prefixIcon: Icons.email),
                               validator: InputValidator.validateEmail,
                             ),
                             SizedBox(height: 20.h),
                             TextFormField(
                               obscureText: true,
-                              decoration: appInputDecoretion(
-                                  'Your Password', Icons.remove_red_eye),
+                              decoration: appInputDecoration(
+                                  hinttext: 'Your Password',
+                                  prefixIcon: Icons.remove_red_eye),
                               validator: InputValidator.validatePassword,
                             ),
                           ],

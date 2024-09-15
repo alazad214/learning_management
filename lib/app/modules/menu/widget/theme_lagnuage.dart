@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../../business logic/controllers/theme_controller.dart';
+import '../../../business logic/controllers/others controller/theme_controller.dart';
 
 class ThemeLagnuage extends StatelessWidget {
   ThemeLagnuage({super.key});

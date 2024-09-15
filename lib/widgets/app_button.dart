@@ -42,15 +42,7 @@ class AppButton extends StatelessWidget {
                     const SizedBox(
                       width: 10,
                     ),
-                    Text(
-                      text,
-                      style: GoogleFonts.poppins(
-                          color: isBorder == true
-                              ? AppColor.primary
-                              : Colors.white,
-                          // fontSize: 20,
-                          fontWeight: FontWeight.w500),
-                    )
+
                   ],
                 )
               : Center(
